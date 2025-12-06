@@ -1,202 +1,114 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hardy Homes — Steel Framing </title>
-
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <style>
-        :root {
-            --brand-blue: #1F4E79;     }
-        h1, h2, h3, h4 {
-            font-family: 'Merriweather', serif;
-            color: var(--brand-blue);  }
-        body {
-            font-family: 'Inter', sans-serif;  }
-        .hero-bg {
-            background: url('images/hero.jpg') center/cover no-repeat;  }
-    </style>
-</head>
-
 <body class="bg-gray-50 text-gray-800">
 
 <!-- NAV -->
 <header class="bg-white/90 backdrop-blur-md fixed w-full z-50 border-b border-gray-200">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
         <h1 class="text-2xl font-bold tracking-tight" style="color: var(--brand-blue);">
-            
             Hardy Homes
         </h1>
         <nav class="hidden md:flex space-x-6 text-gray-700">
-            <a href="#options" class="hover:text-black">Options</a>
-            <a href="#why" class="hover:text-black">Why Steel</a>
             <a href="#contact" class="hover:text-black">Contact</a>
         </nav>
     </div>
 </header>
 
 <!-- HERO -->
-<section class="hero-bg h-[85vh] flex items-center justify-center text-center text-white relative">
-    <div class="absolute inset-0 bg-black/50"></div>
-
-    <div class="relative z-10 px-6">
-        <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white">
-            Precision Steel Structures, Built to Last.
-        </h1>
-        <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8 text-gray-200">
-            Specializing in garden sheds, cottages, ADUs, tiny homes & agricultural buildings —
-            engineered with light-gauge steel for superior strength.
-        </p>
-        <a href="#options"
-           class="px-8 py-3 bg-white text-black rounded-lg font-semibold hover:bg-gray-200">
-            Explore Options
-        </a>
-    </div>
+<section class="h-[70vh] flex flex-col justify-center items-center text-center px-6"
+         style="background: var(--brand-blue); color: white;">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">Precision Steel Structures</h1>
+    <p class="text-lg md:text-xl max-w-2xl text-gray-200 mb-8">
+        Durable steel frames for sheds, ADUs, tiny homes, and agricultural buildings — engineered in Hardy, Arkansas.
+    </p>
+    <a href="#products" class="px-8 py-3 bg-white text-black rounded-lg font-semibold hover:bg-gray-200">
+        Explore Building Options
+    </a>
 </section>
 
-<!-- HERO IMAGE SHOWCASE -->
-<section class="w-full">
-    <img src="images/greenhouse.jpeg"
-         alt="Precision Steel Framing"
-         class="w-full h-[450px] object-cover shadow-lg">
-</section>
-
-
-<!-- PRODUCT OPTIONS -->
-<section id="options" class="py-24">
+<!-- PRODUCT OPTIONS — 3 TILES ABOVE FOLD -->
+<section id="products" class="py-20">
     <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-16">Steel Framing Projects</h2>
-        <div class="grid md:grid-cols-3 gap-12">
 
-    <!-- SIMPLE SHED -->
-    <div class="bg-white rounded-xl shadow p-8 flex flex-col border border-gray-200">
-        <img src="images/greenhouse1.jpeg" class="rounded mb-6 h-56 w-full object-cover" alt="Steel Shed">
-        <h3 class="text-xl font-bold mb-2">Simple Steel Shed</h3>
-        <p class="text-gray-600 mb-6 leading-relaxed">
-            A simple 10x12 durable structure ready for finishing — great for storage,
-            backyard studios, offices, or compact Airbnb stays.
-        </p>
-        <a href="#" 
-           class="mt-auto text-center px-6 py-3 rounded-lg font-semibold text-white"
-           style="background-color: var(--brand-blue);">
-            Buy Now
-        </a>
-    </div>
+        <h2 class="text-3xl font-bold text-center mb-12">Choose Your Building Type</h2>
 
-    <!-- ADU / TINY HOME -->
-    <div class="bg-white rounded-xl shadow p-8 flex flex-col border border-gray-200">
-        <img src="images/tinyhome1.jpeg" class="rounded mb-6 h-56 w-full object-cover" alt="Steel ADU">
-        <h3 class="text-xl font-bold mb-2">Custom ADU or Tiny Home</h3>
-        <p class="text-gray-600 mb-6 leading-relaxed">
-            Custom shed designer, steel-framed cottage, tiny home rental unit, mother-in-law suite
-            or guest house engineered for long-term durability.
-        </p>
-        <a href="#contact"
-           class="mt-auto text-center px-6 py-3 rounded-lg font-semibold text-white"
-           style="background-color: var(--brand-blue);">
-            Schedule Consultation
-        </a>
-    </div>
+        <div class="grid md:grid-cols-3 gap-10">
 
-    <!-- RESIDENTIAL / AGRICULTURAL / CUSTOM BUILDING -->
-    <div class="bg-white rounded-xl shadow p-8 flex flex-col border border-gray-200">
-        <img src="images/custom.jpg" class="rounded mb-6 h-56 w-full object-cover" alt="Agricultural Steel Building">
-        <h3 class="text-xl font-bold mb-2">Agricultural & Custom Buildings</h3>
-        <p class="text-gray-600 mb-6 leading-relaxed">
-            Barns, workshops, utility structures, pump houses and more — built using
-            strong, precision cold-formed steel framing.
-        </p>
-        <a href="#gallery"
-           class="mt-auto text-center px-6 py-3 rounded-lg font-semibold text-white"
-           style="background-color: var(--brand-blue);">
-            View Gallery
-        </a>
-    </div>
+            <!-- SHED TILE -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                <img src="images/greenhouse1.jpeg" class="h-64 w-full object-cover" alt="Steel Shed">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2" style="color: var(--brand-blue);">Steel Shed Kits</h3>
+                    <p class="text-gray-600 mb-4">
+                        Simple, durable steel-framed sheds — ready for finishing.
+                    </p>
+                    <a href="#" class="block text-center py-3 rounded-lg font-semibold text-white"
+                       style="background-color: var(--brand-blue);">
+                        Buy Now
+                    </a>
+                </div>
+            </div>
 
-</div>
+            <!-- ADU TILE -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                <img src="images/tinyhome1.jpeg" class="h-64 w-full object-cover" alt="Steel ADU">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2" style="color: var(--brand-blue);">ADUs & Tiny Homes</h3>
+                    <p class="text-gray-600 mb-4">
+                        Custom-designed steel cottages for guests, rentals & full-time living.
+                    </p>
+                    <a href="#contact" class="block text-center py-3 rounded-lg font-semibold text-white"
+                       style="background-color: var(--brand-blue);">
+                        Schedule Consultation
+                    </a>
+                </div>
+            </div>
 
+            <!-- AGRICULTURAL TILE -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                <img src="images/custom.jpg" class="h-64 w-full object-cover" alt="Agricultural Steel Building">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2" style="color: var(--brand-blue);">Ag & Utility Buildings</h3>
+                    <p class="text-gray-600 mb-4">
+                        Barns, workshops, and utility structures engineered with steel precision.
+                    </p>
+                    <a href="#gallery" class="block text-center py-3 rounded-lg font-semibold text-white"
+                       style="background-color: var(--brand-blue);">
+                        View Gallery
+                    </a>
+                </div>
+            </div>
 
         </div>
     </div>
 </section>
 
-<!-- WHY STEEL -->
-<section id="why" class="py-24 bg-gray-100">
-    <div class="container mx-auto px-6 max-w-4xl text-center">
-        <h2 class="text-3xl font-bold mb-8">Why Light-Gauge Steel?</h2>
-
-        <p class="text-lg text-gray-700 leading-relaxed mb-6">
-            Light-gauge steel framing is straight, strong, and more durable
-            than wood — it will not warp, twist, rot, burn, or attract insects.
-        </p>
-
-        <p class="text-lg text-gray-700 leading-relaxed mb-6">
-            Every component is roll-formed with precision using advanced
-            automated machinery, ensuring consistent quality for every project.
-        </p>
-
-        <p class="text-lg text-gray-700 leading-relaxed">
-            From custom residential builds and barndominiums to she-sheds and ADU's, steel provides
-            exceptional longevity and structural integrity.
-        </p>
-    </div>
-</section>
-
-<!-- GALLERY -->
-<section id="gallery" class="py-24">
-    <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-12">Project Gallery</h2>
-
-        <div class="grid md:grid-cols-3 gap-6">
-            <img src="images/tinyhome1.jpeg" class="rounded shadow" alt="">
-            <img src="images/greenhouse1.jpeg" class="rounded shadow" alt="">
-            <img src="images/greenhouse.jpeg" class="rounded shadow" alt="">
-            <img src="images/eagleslndg.jpeg" class="rounded shadow" alt="">
-            <img src="images/custom.jpg" class="rounded shadow" alt="">
-        </div>
-    </div>
+<!-- WHY STEEL (Simplified) -->
+<section class="py-20 bg-gray-100 text-center px-6">
+    <h2 class="text-3xl font-bold mb-6">Why Choose Steel Framing?</h2>
+    <p class="text-lg max-w-3xl mx-auto text-gray-700 leading-relaxed">
+        Steel framing is straighter, stronger, and more durable than wood. No rot, no warping,
+        no termites, fire-resistant, and engineered for perfect fit and long-term stability.
+    </p>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="py-24 bg-gray-900 text-white">
-    <div class="container mx-auto px-6 max-w-xl">
-        <h2 class="text-3xl font-bold text-center mb-10 text-white">Contact Us</h2>
+<section id="contact" class="py-20 bg-gray-900 text-white">
+    <div class="container mx-auto px-6 max-w-xl text-center">
+        <h2 class="text-3xl font-bold mb-8 text-white">Start Your Project</h2>
 
-        <form action="https://formspree.io/f/yourFormID" method="POST" class="space-y-6">
-            <div>
-                <label class="block mb-1">Name</label>
-                <input type="text" name="name" class="w-full px-4 py-2 rounded text-black" required>
-            </div>
-            <div>
-                <label class="block mb-1">Email</label>
-                <input type="email" name="email" class="w-full px-4 py-2 rounded text-black" required>
-            </div>
-            <div>
-                <label class="block mb-1">Message</label>
-                <textarea name="message" class="w-full px-4 py-2 rounded text-black h-32" required></textarea>
-            </div>
-            <button
-                class="w-full py-3 font-semibold text-black rounded-lg"
-                style="background-color: var(--brand-blue); color: white;">
-                Send Message
-            </button>
-        </form>
+        <p class="text-gray-300 mb-6">
+            Email: <strong>info@hardyhomes.com</strong><br>
+            Phone: <strong>214-763-0146</strong>
+        </p>
+
+        <a href="mailto:info@hardyhomes.com"
+           class="block w-full py-4 bg-white text-black font-semibold rounded-lg hover:bg-gray-200">
+            Send Us a Message
+        </a>
     </div>
 </section>
 
 <footer class="py-6 text-center text-gray-500 text-sm">
-    © 2025 Hardy Homes — Custom Light-Gauge Steel Frames — Hardy Arkansas USA
-     <p class="text-center mb-6 text-gray-300">
-            Email: <strong>cydneyskeens@gmail.com</strong><br>
-            Phone: <strong>214-763-0146</strong>
-        </p>
+    © 2025 Hardy Homes — Hardy, Arkansas
 </footer>
 
 </body>
-</html>
