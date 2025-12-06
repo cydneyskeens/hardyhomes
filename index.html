@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardy Homes — Steel Frames</title>
+    <title>Hardy Homes — Residential Builds, Steel Tiny Homes, Sheds, ADUs & Custom Frames</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -11,86 +11,129 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+<!-- NAV -->
 <header class="nav">
     <div class="container nav-inner">
         <h1 class="logo">Hardy Homes</h1>
         <nav class="nav-links">
-            <a href="#contact">Contact</a>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="index.html#contact">Contact</a>
         </nav>
     </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-    <h1>Precision Steel Structures</h1>
-    <p>Steel-framed sheds, ADUs, tiny homes, and agricultural buildings — engineered in Hardy, Arkansas.</p>
-    <img src="images/greenhouse.jpeg" class="card-img" alt="Steel Shed">
-    <a href="#options" class="btn-light">Explore Building Options</a>
+    <div class="hero-inner fade-in">
+        <h1>Precision Steel Structures</h1>
+        <p>Steel-framed homes, sheds, ADUs, tiny homes, and agricultural buildings — engineered in Hardy, Arkansas.</p>
+        <a href="#options" class="btn-light">Explore Building Options</a>
+    </div>
 </section>
 
+<!-- PRODUCT OPTIONS -->
 <section id="options" class="section">
     <div class="container">
-        <h2 class="section-title">Choose Your Building Type</h2>
+        <h2 class="section-title fade-in">Choose Your Building Type</h2>
 
         <div class="grid-3">
-            <div class="card">
+
+            <!-- SHED -->
+            <div class="card fade-in">
                 <img src="images/greenhouse1.jpeg" class="card-img" alt="Steel Shed">
                 <h3>Steel Shed Kits</h3>
+                <p class="price">Starting at $3,995</p>
                 <p>Simple, durable steel frames ready for finishing.</p>
-                <a class="btn-dark" href="#">Buy Now</a>
+                <a class="btn-dark" href="shed-buy-now.html">View Shed Models</a>
             </div>
 
-            <div class="card">
+            <!-- ADU -->
+            <div class="card fade-in">
                 <img src="images/tinyhome1.jpeg" class="card-img" alt="ADU">
                 <h3>ADUs & Tiny Homes</h3>
+                <p class="price">Frames from $16,000</p>
                 <p>Custom-designed steel cottages for guests, rentals, or full-time living.</p>
                 <a class="btn-dark" href="#contact">Schedule Consultation</a>
             </div>
 
-            <div class="card">
+            <!-- AGRICULTURE -->
+            <div class="card fade-in">
                 <img src="images/custom.jpg" class="card-img" alt="Ag Building">
                 <h3>Ag & Utility Buildings</h3>
+                <p class="price">From $15 / sq ft</p>
                 <p>Barns, workshops, pump houses, and utility buildings built with precision steel.</p>
-                <a class="btn-dark" href="#gallery">View Gallery</a>
+                <a class="btn-dark" href="gallery.html">View Projects</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- WHY STEEL (WITH ICONS) -->
+<section class="section alt">
+    <div class="container">
+        <h2 class="section-title fade-in">Why Choose Steel Framing?</h2>
+
+        <div class="icon-grid">
+            <div class="icon-item fade-in">
+                <div class="icon-circle">🛡️</div>
+                <h3>Stronger & Straighter</h3>
+                <p>Steel framing stays straight and true. No warping, twisting, or sagging over time.</p>
+            </div>
+            <div class="icon-item fade-in">
+                <div class="icon-circle">🔥</div>
+                <h3>Fire Resistant</h3>
+                <p>Unlike wood, steel isn’t a fuel source — improving fire performance and peace of mind.</p>
+            </div>
+            <div class="icon-item fade-in">
+                <div class="icon-circle">🐜</div>
+                <h3>Termite-Proof</h3>
+                <p>Steel can’t be eaten by insects, helping protect your investment for decades.</p>
+            </div>
+            <div class="icon-item fade-in">
+                <div class="icon-circle">📏</div>
+                <h3>Precision Built</h3>
+                <p>Roll-formed components are manufactured to exact lengths for a fast, efficient build.</p>
             </div>
         </div>
     </div>
 </section>
 
-<section class="section alt">
+<!-- GALLERY PREVIEW -->
+<section class="section">
     <div class="container">
-        <h2 class="section-title">Why Choose Steel Framing?</h2>
-        <p class="text-lg">
-            Steel framing is straighter, stronger, fire-resistant, termite-proof, and won't warp or rot.
-            Each component is precision-made for long-term durability and high structural performance.
-        </p>
-    </div>
-</section>
-
-<section id="gallery" class="section">
-    <div class="container">
-        <h2 class="section-title">Project Gallery</h2>
+        <h2 class="section-title fade-in">Project Gallery</h2>
 
         <div class="grid-3">
-            <img src="images/greenhouse1.jpeg" class="card-img" alt="">
-            <img src="images/greenhouse.jpeg" class="card-img" alt="">
-            <img src="images/tinyhome1.jpeg" class="card-img" alt="">
+            <img src="images/greenhouse1.jpeg" class="card-img fade-in" alt="">
+            <img src="images/greenhouse.jpeg" class="card-img fade-in" alt="">
+            <img src="images/tinyhome1.jpeg" class="card-img fade-in" alt="">
+            <img src="images/eagleslndg.jpeg" class="card-img fade-in" alt="">
+            <img src="images/custom.jpg" class="card-img fade-in" alt="">
+        </div>
+
+        <div class="center mt-30 fade-in">
+            <a href="gallery.html" class="btn-dark">See Full Gallery</a>
         </div>
     </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="section contact">
     <div class="container">
         <h2 class="section-title">Start Your Project</h2>
-        <p>Email: <strong>cydneyskeens.com</strong></p>
+        <p>Email: <strong>info@hardyhomes.com</strong></p>
         <p>Phone: <strong>214-763-0146</strong></p>
-        <a href="mailto:cydneyskeens@gmail.com" class="btn-light contact-btn">Send Us a Message</a>
+        <a href="mailto:info@hardyhomes.com" class="btn-light contact-btn">Send Us a Message</a>
     </div>
 </section>
 
 <footer class="footer">
-    © 2025 Hardy Homes — Hardy, Arkansas
+    © 2025 Hardy Homes — Hardy, Arkansas USA
 </footer>
 
 </body>
