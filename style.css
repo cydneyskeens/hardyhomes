@@ -200,7 +200,8 @@ h1, h2, h3 {
 
     /* Keep cards a normal size */
     min-height: 420px;
-    max-height: 460px;  /* <-- THIS prevents the giant stretching */
+    max-height: 420px;
+  /* <-- THIS prevents the giant stretching */
     overflow: hidden;   /* Prevents content explosion */
 
     /* Flex for button positioning */
