@@ -209,12 +209,24 @@ h1, h2, h3 {
     /* Hover animation */
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+/* Make the whole card behave like a clickable link */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
 
 /* Slight hover lift & deeper shadow */
 .card:hover {
     transform: translateY(-6px);
     box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+    text-decoration: none;
 }
+
 
 /* Makes descriptions expand but keeps button aligned */
 .card p {
