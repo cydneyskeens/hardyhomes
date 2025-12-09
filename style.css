@@ -198,31 +198,35 @@ h1, h2, h3 {
     box-shadow: 0 4px 12px rgba(0,0,0,0.12);
     text-align: center;
 
-    /* Keep cards a normal size */
+    /* prevents oversized card height */
     min-height: 420px;
-    max-height: 420px;
-  /* <-- THIS prevents the giant stretching */
-    overflow: hidden;   /* Prevents content explosion */
+    max-height: 460px;
 
-    /* Flex for button positioning */
+    /* child layout */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;  /* IMPORTANT: remove stretching */
 
-    /* Hover animation */
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+}
+
+
 /* Make the whole card behave like a clickable link */
 .card-link {
+    display: block;
     text-decoration: none;
     color: inherit;
-    display: block;   /* behave like a normal card */
-    cursor: pointer;
 }
+
 .card p {
-    flex-grow: 0; /* prevents long text from stretching entire card */
+    flex-grow: 0;
 }
+
 
 
 
