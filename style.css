@@ -191,31 +191,34 @@ h1, h2, h3 {
 }
 
 /* === Cards / Products === */
-.card-grid {
-    display: grid;
-    gap: 30px;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
-
 .card {
     background: white;
     padding: 20px;
     border-radius: 6px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12); /* subtle rustic shadow */
     text-align: center;
+
+    /* Equal height for EVERY card */
+    min-height: 460px;
+
+    /* Flexbox structure to balance spacing */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    /* Hover animation */
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.card-img {
-    width: 100%;
-    height: 190px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: 15px;
+/* Slight hover lift & deeper shadow */
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.18);
 }
 
-.price {
-    font-weight: bold;
-    margin: 8px 0;
+/* Makes descriptions expand but keeps button aligned */
+.card p {
+    flex-grow: 1;
 }
 
 /* === Why Steel Icons === */
