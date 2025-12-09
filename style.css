@@ -174,6 +174,16 @@ h1, h2, h3 {
     background: #3e3a36;
     color: white;
 }
+.card-btn {
+    margin-top: 20px;
+    align-self: center;   /* keeps button centered */
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+}
+
 
 /* === Sections === */
 .section {
