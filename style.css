@@ -184,6 +184,11 @@ h1, h2, h3 {
     display: inline-block;
 }
 
+.card a.btn-dark {
+    margin-top: auto;  /* Push button to bottom of card */
+    display: inline-block;
+    text-align: center;
+}
 
 /* === Sections === */
 .section {
@@ -236,6 +241,13 @@ h1, h2, h3 {
     display: block;  /* ensures it respects the height rule */
 }
 
+/* Fix shed page card layout */
+.grid-3 {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: start;
+}
 
 
 
