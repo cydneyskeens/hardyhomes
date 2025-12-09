@@ -1,3 +1,62 @@
+/* === NEW NAVBAR LAYOUT === */
+
+.nav-grid {
+    display: grid;
+    grid-template-columns: 140px 1fr 300px;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    height: 55px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-family: 'Merriweather', serif;
+    font-size: 1.9rem;
+    text-align: center;
+    font-weight: 700;
+    color: white;
+}
+
+.nav-right {
+    display: flex;
+    justify-content: flex-end;
+    gap: 22px;
+}
+
+/* Fix for mobile */
+@media (max-width: 800px) {
+    .nav-grid {
+        grid-template-columns: 80px 1fr;
+        grid-template-areas:
+            "logo links"
+            "title title";
+        text-align: center;
+        gap: 10px;
+    }
+
+    .nav-left { grid-area: logo; }
+    .nav-center { grid-area: title; }
+    .nav-right { grid-area: links; justify-content: center; }
+
+    .nav-logo {
+        height: 45px;
+    }
+
+    .logo-text {
+        font-size: 1.4rem;
+        margin-top: 5px;
+    }
+}
+
 /* === Base === */
 * {
     margin: 0;
