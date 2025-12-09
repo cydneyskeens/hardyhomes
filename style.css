@@ -12,11 +12,18 @@
     align-items: center;
 }
 
+.nav-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .nav-logo {
     height: 55px;
     width: auto;
     object-fit: contain;
 }
+
 
 .logo-text {
     font-family: 'Merriweather', serif;
