@@ -3,160 +3,510 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardy Homes — Steel Frame Tiny Homes, Sheds, ADUs & Custom Builds</title>
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <!-- Custom Styles -->
+    <title>Hardy Homes — Precision Steel Framing | Hardy, Arkansas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <!-- NAV -->
-<header class="nav">
+<header class="nav" id="navbar">
     <div class="container nav-grid">
-
-        <!-- Left: Logo -->
         <div class="nav-left">
             <img src="images/hardyhomeslogo.png" alt="Hardy Homes Logo" class="nav-logo">
         </div>
-
-        <!-- Center: Title -->
         <div class="nav-center">
-            <h1 class="logo-text">Hardy Homes</h1>
+            <span class="logo-text">Hardy Homes</span>
         </div>
-
-        <!-- Right: Links -->
         <nav class="nav-right nav-links">
-            <a href="index.html">Home</a>
+            <a href="index.html" class="active">Home</a>
             <a href="gallery.html">Gallery</a>
+            <a href="shed-buy-now.html">Shop</a>
             <a href="#contact">Contact</a>
         </nav>
-
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
     </div>
+    <nav class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="shed-buy-now.html">Shop</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
-
-<!-- HERO SPLIT SECTION -->
-<section class="hero hero-split">
-    <div class="hero-text fade-in">
-        <h1>Precision Steel Structures</h1>
-        <p>Custom steel framing for homes, sheds, ADUs, tiny houses, and agricultural buildings — engineered and fabricated in Hardy, Arkansas.</p>
-        <a href="#options" class="btn-light">Explore Building Options</a>
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <div class="hero-badge reveal">Hardy, Arkansas · Est. 2020</div>
+        <h1 class="hero-headline reveal">
+            Precision Steel<br><em>Built to Last.</em>
+        </h1>
+        <p class="hero-sub reveal">
+            Custom steel framing for homes, sheds, ADUs, and agricultural buildings — engineered on-site with our mobile roll-forming factory.
+        </p>
+        <div class="hero-ctas reveal">
+            <a href="#services" class="btn-primary">Explore Services</a>
+            <a href="shed-buy-now.html" class="btn-outline-light">Shop Kits</a>
+        </div>
     </div>
-
-    <div class="hero-image"></div>
+    <div class="hero-scroll-hint">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+    </div>
 </section>
 
-<!-- PRODUCT OPTIONS -->
-<section id="options" class="section">
+
+<!-- ═══════════════════════════
+     SERVICES
+═══════════════════════════ -->
+<section id="services" class="section services-section">
     <div class="container">
-        <h2 class="section-title fade-in">Choose Your Building Type</h2>
+        <div class="section-header reveal">
+            <span class="section-tag">What We Build</span>
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-sub">From backyard sheds to full residential builds — we bring the factory to you.</p>
+        </div>
 
-        <div class="card-grid">
+        <div class="services-grid">
 
-            <!-- CARD 1 -->
-        <a href="shed-buy-now.html" class="card card-link fade-in">
-    <img src="images/greenhouse1.jpeg" alt="" class="card-img">
-    <h3>Steel Shed Kits</h3>
-    <p>Simple, durable steel frames ready for finishing.</p>
+            <a href="shed-buy-now.html" class="service-card reveal">
+                <div class="service-img-wrap">
+                    <img src="images/greenhouse1.jpeg" alt="Steel Shed Kits">
+                    <div class="service-img-tag">Ready-to-Build</div>
+                </div>
+                <div class="service-body">
+                    <h3>Steel Shed Kits</h3>
+                    <p>Pre-cut, labeled steel frames shipped flat. Available in multiple sizes — ideal for storage, workshops, and backyard studios.</p>
+                    <span class="service-link">View Models & Pricing →</span>
+                </div>
+            </a>
 
-    <span class="btn-dark card-btn">View Models</span>
-</a>
+            <a href="#contact" class="service-card reveal" style="--delay:0.1s">
+                <div class="service-img-wrap">
+                    <img src="images/tinyhome1.jpeg" alt="Tiny Home">
+                    <div class="service-img-tag">Custom Build</div>
+                </div>
+                <div class="service-body">
+                    <h3>Tiny Homes & ADUs</h3>
+                    <p>High-end steel cottages for guest houses, short-term rentals, or full-time living. Built to spec from the ground up.</p>
+                    <span class="service-link">Schedule a Consultation →</span>
+                </div>
+            </a>
 
+            <a href="gallery.html" class="service-card reveal" style="--delay:0.2s">
+                <div class="service-img-wrap">
+                    <img src="images/custom.jpg" alt="On-Site Fabrication">
+                    <div class="service-img-tag">Mobile Fabrication</div>
+                </div>
+                <div class="service-body">
+                    <h3>On-Site Fabrication</h3>
+                    <p>Residential, commercial, and agricultural builds — fabricated on location with our mobile roll-forming unit.</p>
+                    <span class="service-link">View Projects →</span>
+                </div>
+            </a>
 
-
-            <!-- CARD 2 -->
-            <a href="#contact" class="card card-link fade-in">
-    <img src="images/tinyhome1.jpeg" alt="" class="card-img">
-    <h3>Tiny Homes</h3>
-    <p>High-end steel cottages for guests, rentals, or full-time living.</p>
-                 <span class="btn-dark card-btn">Schedule Consultation</span>
-</a>
-
-
-            <!-- CARD 3 -->
-           <a href="gallery.html" class="card card-link fade-in">
-    <img src="images/custom.jpg" alt="" class="card-img">
-    <h3>On Site Frame Fabrication</h3>
-    <p>Residential, commercial, and agricultural structures — pergolas to full builds fabricated with mobile roll forming unit.</p>
-                <span class="btn-dark card-btn">View Projects</span>
-</a>
-
+            <a href="#framing-kits" class="service-card reveal" style="--delay:0.3s">
+                <div class="service-img-wrap">
+                    <img src="images/eagleslndg.jpeg" alt="Framing Kits">
+                    <div class="service-img-tag">Steel Components</div>
+                </div>
+                <div class="service-body">
+                    <h3>Framing Kits</h3>
+                    <p>Pre-cut, labeled steel framing kits for DIY builders and contractors. Exact lengths — no field cutting required.</p>
+                    <span class="service-link">Browse Kits →</span>
+                </div>
+            </a>
 
         </div>
     </div>
 </section>
 
-<!-- WHY STEEL -->
-<section class="section alt">
-    <div class="container">
-        <h2 class="section-title fade-in">Why Choose Steel Framing?</h2>
 
-        <div class="icon-grid">
-            <div class="icon-item fade-in">
-                <div class="icon-circle">🛡️</div>
+<!-- ═══════════════════════════
+     WHY STEEL
+═══════════════════════════ -->
+<section class="section why-steel">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag">The Steel Advantage</span>
+            <h2 class="section-title">Why Choose Steel?</h2>
+        </div>
+        <div class="why-grid">
+            <div class="why-item reveal">
+                <div class="why-icon">🛡️</div>
                 <h3>Stronger & Straighter</h3>
-                <p>No warping, twisting, or sagging over time.</p>
+                <p>No warping, twisting, or sagging over time. Steel holds its shape for decades.</p>
             </div>
-
-            <div class="icon-item fade-in">
-                <div class="icon-circle">🔥</div>
+            <div class="why-item reveal" style="--delay:0.1s">
+                <div class="why-icon">🔥</div>
                 <h3>Fire Resistant</h3>
-                <p>Steel isn’t a fuel source — better fire performance than wood.</p>
+                <p>Steel isn't a fuel source — significantly better fire performance than wood.</p>
             </div>
-
-            <div class="icon-item fade-in">
-                <div class="icon-circle">🐜</div>
+            <div class="why-item reveal" style="--delay:0.2s">
+                <div class="why-icon">🐜</div>
                 <h3>Termite-Proof</h3>
-                <p>Insects can't damage steel — decades of protection.</p>
+                <p>Insects can't damage steel — decades of protection with zero pest risk.</p>
             </div>
-
-            <div class="icon-item fade-in">
-                <div class="icon-circle">📏</div>
+            <div class="why-item reveal" style="--delay:0.3s">
+                <div class="why-icon">📏</div>
                 <h3>Precision Built</h3>
-                <p>Roll-formed components manufactured to exact lengths on site from our mobile roll forming factory.</p>
+                <p>Roll-formed to exact lengths on-site — no field cutting, no waste, no errors.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- GALLERY PREVIEW -->
-<section class="section">
-    <div class="container">
-        <h2 class="section-title fade-in">Project Gallery</h2>
 
-        <div class="gallery-grid">
-            <img src="images/greenhouse1.jpeg" class="gallery-img fade-in" alt="">
-            <img src="images/greenhouse.jpeg" class="gallery-img fade-in" alt="">
-            <img src="images/tinyhome1.jpeg" class="gallery-img fade-in" alt="">
-            <img src="images/eagleslndg.jpeg" class="gallery-img fade-in" alt="">
-            <img src="images/custom.jpg" class="gallery-img fade-in" alt="">
-            <img src="images/scottsdale.jpg" class="gallery-img fade-in" alt="">
-            <img src="images/scottsdale-card.jpg" class="gallery-img fade-in" alt="">
+<!-- ═══════════════════════════
+     FRAMING KITS GALLERY
+═══════════════════════════ -->
+<section id="framing-kits" class="section kits-section">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag">Steel Components</span>
+            <h2 class="section-title">Framing Kits</h2>
+            <p class="section-sub">Roll-formed to exact lengths, labeled, bundled, and ready to assemble. No waste, no guesswork.</p>
         </div>
 
-        <div class="center mt-30 fade-in">
-            <a href="gallery.html" class="btn-dark">See Full Gallery</a>
+        <div class="kits-gallery">
+            <div class="kit-item reveal">
+                <img src="images/greenhouse1.jpeg" alt="Greenhouse Frame Kit">
+                <div class="kit-overlay">
+                    <div class="kit-label">Greenhouse Frame Kit</div>
+                    <a href="shed-buy-now.html" class="kit-cta">View Kit →</a>
+                </div>
+            </div>
+            <div class="kit-item reveal" style="--delay:0.05s">
+                <img src="images/greenhouse.jpeg" alt="Hoop House Frame">
+                <div class="kit-overlay">
+                    <div class="kit-label">Hoop House Frame</div>
+                    <a href="shed-buy-now.html" class="kit-cta">View Kit →</a>
+                </div>
+            </div>
+            <div class="kit-item reveal" style="--delay:0.1s">
+                <img src="images/eagleslndg.jpeg" alt="Residential Wall Framing">
+                <div class="kit-overlay">
+                    <div class="kit-label">Residential Wall Framing</div>
+                    <a href="shed-buy-now.html" class="kit-cta">View Kit →</a>
+                </div>
+            </div>
+            <div class="kit-item reveal" style="--delay:0.15s">
+                <img src="images/timbersteel.heic" alt="Timber Steel Combo">
+                <div class="kit-overlay">
+                    <div class="kit-label">Timber-Steel Combo Frame</div>
+                    <a href="shed-buy-now.html" class="kit-cta">View Kit →</a>
+                </div>
+            </div>
+            <div class="kit-item reveal" style="--delay:0.2s">
+                <img src="images/steelframe1.heic" alt="Steel Frame">
+                <div class="kit-overlay">
+                    <div class="kit-label">Light Gauge Steel Frame</div>
+                    <a href="shed-buy-now.html" class="kit-cta">View Kit →</a>
+                </div>
+            </div>
+            <div class="kit-item reveal" style="--delay:0.25s">
+                <img src="images/custom.jpg" alt="Agricultural Frame">
+                <div class="kit-overlay">
+                    <div class="kit-label">Agricultural Frame</div>
+                    <a href="shed-buy-now.html" class="kit-cta">View Kit →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="center mt-40 reveal">
+            <a href="shed-buy-now.html" class="btn-primary">Request a Custom Kit Quote</a>
         </div>
     </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="section contact">
+
+<!-- ═══════════════════════════
+     MOBILE ROLL FORMER
+═══════════════════════════ -->
+<section class="roll-former-section">
+    <div class="roll-former-bg"></div>
     <div class="container">
-        <h2 class="section-title">Start Your Project</h2>
-        <p>Email: <strong>cydneyskeens@gmail.com</strong></p>
-        <p>Phone: <strong>+1-214-763-0146</strong></p>
-        <a href="mailto:cydneyskeens@gmail.com" class="btn-light contact-btn">Send Us a Message</a>
+        <div class="roll-former-grid">
+            <div class="roll-former-text reveal">
+                <span class="section-tag light">The Hardy Homes Advantage</span>
+                <h2>The Mobile Roll Former Factory</h2>
+                <p>Hardy Homes brings the factory <em>to you</em>. Our mobile roll-forming unit travels to your job site and manufactures steel framing components on demand — cut to exact lengths, labeled, and ready to set.</p>
+                <p>This eliminates freight damage, field measuring errors, and off-cut waste. Whether you're building a backyard shed or a full residential structure: precision components, faster assembly, less money left on the floor.</p>
+                <ul class="rf-features">
+                    <li>Components formed on-site to exact spec</li>
+                    <li>Eliminates freight costs & shipping damage</li>
+                    <li>Zero field-cutting required</li>
+                    <li>Serves residential, commercial & agricultural projects</li>
+                    <li>Available across Arkansas and surrounding states</li>
+                </ul>
+                <a href="#contact" class="btn-primary" style="margin-top:1.5rem; display:inline-block;">Book the Roll Former</a>
+            </div>
+            <div class="roll-former-visual reveal" style="--delay:0.2s">
+                <div class="rf-placeholder">
+                    <div class="rf-icon">⚙️</div>
+                    <p>Mobile Roll Former Photo</p>
+                    <small>Add <code>images/roll-former.jpg</code> to show your unit here.</small>
+                </div>
+                <!-- When ready: <img src="images/roll-former.jpg" alt="Hardy Homes Mobile Roll Forming Unit"> -->
+            </div>
+        </div>
     </div>
 </section>
 
+
+<!-- ═══════════════════════════
+     SHED KIT PACKAGES (STRIPE)
+═══════════════════════════ -->
+<section id="shop" class="section shop-section">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag">Online Store</span>
+            <h2 class="section-title">Shed Kit Packages</h2>
+            <p class="section-sub">Secure checkout powered by Stripe. Reserve your kit today.</p>
+        </div>
+
+        <div class="shop-grid">
+
+            <!-- Kit 1 -->
+            <div class="shop-card reveal">
+                <div class="shop-card-header">
+                    <h3>Starter Shed Kit</h3>
+                    <div class="shop-price">$1,200</div>
+                    <div class="shop-price-note">10×12 footprint</div>
+                </div>
+                <ul class="shop-features">
+                    <li>Pre-cut, labeled steel frame</li>
+                    <li>Assembly guide included</li>
+                    <li>Ships flat — no crane needed</li>
+                    <li>Perfect for storage or backyard workspace</li>
+                </ul>
+                <button class="stripe-btn" onclick="handleStripeCheckout('starter', 1200, 'Starter Shed Kit (10×12)')">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                    Buy Now — $1,200
+                </button>
+                <p class="stripe-note">🔒 Secure checkout via Stripe</p>
+            </div>
+
+            <!-- Kit 2 — Featured -->
+            <div class="shop-card featured reveal" style="--delay:0.1s">
+                <div class="featured-badge">Most Popular</div>
+                <div class="shop-card-header">
+                    <h3>Workshop Kit</h3>
+                    <div class="shop-price">$2,400</div>
+                    <div class="shop-price-note">20×24 footprint</div>
+                </div>
+                <ul class="shop-features">
+                    <li>Pre-cut, labeled steel frame</li>
+                    <li>Engineered for standard roofing & siding</li>
+                    <li>Assembly guide included</li>
+                    <li>Ideal for hobby barn or large workshop</li>
+                </ul>
+                <button class="stripe-btn featured-btn" onclick="handleStripeCheckout('workshop', 2400, 'Workshop Kit (20×24)')">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                    Buy Now — $2,400
+                </button>
+                <p class="stripe-note">🔒 Secure checkout via Stripe</p>
+            </div>
+
+            <!-- Kit 3 -->
+            <div class="shop-card reveal" style="--delay:0.2s">
+                <div class="shop-card-header">
+                    <h3>Custom Quote</h3>
+                    <div class="shop-price" style="font-size:1.6rem;">Let's Talk</div>
+                    <div class="shop-price-note">Any size & spec</div>
+                </div>
+                <ul class="shop-features">
+                    <li>Any footprint or height</li>
+                    <li>Agricultural & commercial specs</li>
+                    <li>On-site fabrication available</li>
+                    <li>Fast turnaround</li>
+                </ul>
+                <a href="mailto:cydneyskeens@gmail.com?subject=Custom Build Quote" class="stripe-btn custom-btn">
+                    Get a Quote →
+                </a>
+                <p class="stripe-note">📧 We respond within 1 business day</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Stripe Modal -->
+<div id="stripeModal" class="modal-overlay">
+    <div class="modal-box">
+        <button class="modal-close" onclick="closeModal()">×</button>
+        <div class="modal-stripe-logo">
+            <svg width="48" height="20" viewBox="0 0 48 20" fill="none"><path d="M8.08 8.08c0-.74.61-1.03 1.62-1.03 1.45 0 3.27.44 4.72 1.22V4.16C12.9 3.57 11.34 3.3 9.72 3.3 5.96 3.3 3.47 5.22 3.47 8.3c0 4.73 6.52 3.97 6.52 6.01 0 .88-.76 1.16-1.82 1.16-1.58 0-3.6-.65-5.2-1.53v4.16c1.77.76 3.55 1.08 5.2 1.08 3.85 0 6.5-1.9 6.5-5.03-.04-5.11-6.59-4.19-6.59-6.07zm15.98-3.62l-3.1.66v2.26h-1.9v3.5h1.9v7.22h3.62v-7.22h2.39l.35-3.5h-2.74V4.46zm8.47 3.04c-1.24 0-2.04.58-2.5 1.01l-.16-.8h-3.22v14.7l3.65-.77.01-3.57c.47.34 1.16.82 2.2.82 2.23 0 4.26-1.79 4.26-5.73-.03-3.61-2.06-5.66-4.24-5.66zm-.74 8.73c-.73 0-1.17-.26-1.47-.58l-.02-4.6c.32-.36.78-.6 1.49-.6 1.14 0 1.92 1.28 1.92 2.88 0 1.64-.77 2.9-1.92 2.9z" fill="#635bff"/></svg>
+            <span>Powered by Stripe</span>
+        </div>
+        <h3 id="modalTitle">Complete Your Order</h3>
+        <p id="modalDesc" style="color:#666; font-size:.9rem; margin:.5rem 0 1.5rem;"></p>
+
+        <div class="stripe-form">
+            <div class="form-row">
+                <label>Full Name</label>
+                <input type="text" id="sName" placeholder="Jane Hardy" />
+            </div>
+            <div class="form-row">
+                <label>Email Address</label>
+                <input type="email" id="sEmail" placeholder="jane@example.com" />
+            </div>
+            <div class="form-row">
+                <label>Phone</label>
+                <input type="tel" id="sPhone" placeholder="+1 (555) 000-0000" />
+            </div>
+            <div class="form-row">
+                <label>Delivery ZIP Code</label>
+                <input type="text" id="sZip" placeholder="72543" />
+            </div>
+            <div class="form-row">
+                <label>Card Number</label>
+                <div class="fake-card-input">
+                    <input type="text" placeholder="1234 5678 9012 3456" maxlength="19" />
+                    <span>🔒</span>
+                </div>
+            </div>
+            <div class="form-row-split">
+                <div class="form-row">
+                    <label>Expiry</label>
+                    <input type="text" placeholder="MM / YY" maxlength="7" />
+                </div>
+                <div class="form-row">
+                    <label>CVC</label>
+                    <input type="text" placeholder="123" maxlength="4" />
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-total" id="modalTotal"></div>
+
+        <button class="modal-pay-btn" onclick="submitPayment()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Complete Secure Purchase
+        </button>
+        <p class="modal-disclaimer">Your payment is secured by Stripe encryption. Hardy Homes will contact you within 1 business day to confirm your order and shipping details.</p>
+    </div>
+</div>
+
+
+<!-- ═══════════════════════════
+     GALLERY PREVIEW
+═══════════════════════════ -->
+<section class="section gallery-preview-section">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag">Our Work</span>
+            <h2 class="section-title">Project Gallery</h2>
+        </div>
+        <div class="gallery-preview-grid">
+            <img src="images/greenhouse1.jpeg" class="reveal" alt="Greenhouse Project">
+            <img src="images/greenhouse.jpeg" class="reveal" style="--delay:0.05s" alt="Greenhouse">
+            <img src="images/tinyhome1.jpeg" class="reveal" style="--delay:0.1s" alt="Tiny Home">
+            <img src="images/eagleslndg.jpeg" class="reveal" style="--delay:0.15s" alt="Eagles Landing">
+            <img src="images/custom.jpg" class="reveal" style="--delay:0.2s" alt="Custom Build">
+        </div>
+        <div class="center mt-40 reveal">
+            <a href="gallery.html" class="btn-primary">View Full Gallery</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════
+     CONTACT
+═══════════════════════════ -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info reveal">
+                <span class="section-tag light">Get In Touch</span>
+                <h2>Start Your Project</h2>
+                <p>Ready to build? Have questions about a kit or custom design? We'd love to hear from you. We respond within one business day.</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <span class="ci-icon">✉</span>
+                        <a href="mailto:cydneyskeens@gmail.com">cydneyskeens@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="ci-icon">📞</span>
+                        <a href="tel:+12147630146">+1 (214) 763-0146</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="ci-icon">📍</span>
+                        <span>Hardy, Arkansas USA</span>
+                    </div>
+                </div>
+                <a href="mailto:cydneyskeens@gmail.com" class="btn-primary" style="margin-top:2rem; display:inline-block;">Send Us a Message</a>
+            </div>
+            <div class="contact-form-wrap reveal" style="--delay:0.15s">
+                <form class="contact-form" onsubmit="handleContactForm(event)">
+                    <div class="cf-row">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="cf-row">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="cf-row">
+                        <select>
+                            <option value="">I'm interested in…</option>
+                            <option>Starter Shed Kit</option>
+                            <option>Workshop Kit</option>
+                            <option>Framing Kits</option>
+                            <option>Tiny Home / ADU</option>
+                            <option>On-Site Fabrication</option>
+                            <option>Mobile Roll Former</option>
+                            <option>Custom Quote</option>
+                        </select>
+                    </div>
+                    <div class="cf-row">
+                        <textarea placeholder="Tell us about your project…" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary w-full">Send Message</button>
+                    <div class="cf-success" id="cfSuccess">✅ Message sent! We'll be in touch soon.</div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- FOOTER -->
 <footer class="footer">
-    © 2025 Hardy Homes — Hardy, Arkansas USA
+    <div class="container footer-inner">
+        <div class="footer-brand">
+            <img src="images/hardyhomeslogo.png" alt="Hardy Homes" class="footer-logo">
+            <span>Hardy Homes</span>
+        </div>
+        <div class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="shed-buy-now.html">Shop Kits</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-copy">© 2026 Hardy Homes — Hardy, Arkansas USA</div>
+    </div>
+
+    <!-- Partner Links -->
+    <div class="partner-bar">
+        <div class="container">
+            <div class="partner-inner">
+                <span class="partner-label">Our Partners & Friends</span>
+                <a href="https://your-landscaping-site.com" class="partner-link" target="_blank" rel="noopener">
+                    🌿 Hardy Landscaping
+                </a>
+                <span class="partner-sep">·</span>
+                <a href="https://cydneyskeens.com" class="partner-link" target="_blank" rel="noopener">
+                    🏠 CydneySkeens.com
+                </a>
+            </div>
+        </div>
+    </div>
 </footer>
 
+<script src="main.js"></script>
 </body>
 </html>

@@ -4,69 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Gallery — Hardy Homes</title>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="nav">
+<header class="nav" id="navbar">
     <div class="container nav-grid">
-
-        <!-- Left: Logo -->
         <div class="nav-left">
             <img src="images/hardyhomeslogo.png" alt="Hardy Homes Logo" class="nav-logo">
         </div>
-
-        <!-- Center -->
         <div class="nav-center">
-            <h1 class="logo-text">Hardy Homes</h1>
+            <span class="logo-text">Hardy Homes</span>
         </div>
-
-        <!-- Right -->
         <nav class="nav-right nav-links">
             <a href="index.html">Home</a>
             <a href="gallery.html" class="active">Gallery</a>
+            <a href="shed-buy-now.html">Shop</a>
             <a href="index.html#contact">Contact</a>
         </nav>
-
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
     </div>
+    <nav class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="shed-buy-now.html">Shop</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
 </header>
 
+<!-- Page Hero -->
+<div class="page-hero" style="padding: 140px 0 60px; background: var(--charcoal);">
+    <div class="container" style="text-align:center;">
+        <span class="section-tag light">Our Work</span>
+        <h2 style="font-family:'Playfair Display',serif; font-size:clamp(2rem,4vw,3rem); color:white; margin-top:8px;">Project Gallery</h2>
+        <p style="color:rgba(255,255,255,0.55); font-size:1rem; max-width:520px; margin:12px auto 0; line-height:1.7; font-weight:300;">
+            From greenhouses to tiny homes — a look at what we've built across Arkansas and beyond.
+        </p>
+    </div>
+</div>
 
-<!-- === GALLERY === -->
+<!-- GALLERY -->
 <section class="gallery-wrapper">
     <div class="container">
-        <h2 class="section-title fade-in">Project Gallery</h2>
-
-        <div class="masonry-gallery fade-in">
-
-            <!-- Add as many images as you want -->
-            <img src="images/greenhouse1.jpeg" alt="">
-            <img src="images/greenhouse.jpeg" alt="">
-            <img src="images/tinyhome1.jpeg" alt="">
-            <img src="images/eagleslndg.jpeg" alt="">
-            <img src="images/steelframe1.heic" alt="">
-            <img src="images/timbersteel.heic" alt="">
-            <img src="images/custom.jpg" alt="">
-            <img src="images/greenhouse1.jpeg" alt="">
-            <img src="images/tinyhome1.jpeg" alt="">
-
+        <div class="masonry-gallery">
+            <img src="images/greenhouse1.jpeg" alt="Greenhouse Project">
+            <img src="images/greenhouse.jpeg" alt="Hoop Greenhouse">
+            <img src="images/tinyhome1.jpeg" alt="Tiny Home">
+            <img src="images/eagleslndg.jpeg" alt="Eagles Landing Project">
+            <img src="images/steelframe1.heic" alt="Steel Frame Construction">
+            <img src="images/timbersteel.heic" alt="Timber Steel Structure">
+            <img src="images/custom.jpg" alt="Custom Build">
+            <img src="images/greenhouse1.jpeg" alt="Greenhouse Build">
+            <img src="images/tinyhome1.jpeg" alt="Tiny Home Build">
         </div>
     </div>
 </section>
 
+<!-- CTA Band -->
+<section style="background: var(--warm-dark); padding: 60px 0; text-align:center;">
+    <div class="container">
+        <h3 style="font-family:'Playfair Display',serif; color:white; font-size:1.7rem; margin-bottom:10px;">Ready to start your project?</h3>
+        <p style="color:rgba(255,255,255,0.55); margin-bottom:24px; font-size:0.95rem;">Get a quote or reserve a framing kit today.</p>
+        <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+            <a href="shed-buy-now.html" class="btn-primary">Shop Kits</a>
+            <a href="index.html#contact" class="btn-outline-light">Contact Us</a>
+        </div>
+    </div>
+</section>
 
 <!-- LIGHTBOX -->
 <div id="lightbox" class="lightbox">
     <span class="close-lightbox">&times;</span>
-    <img id="lightbox-img" src="">
+    <img id="lightbox-img" src="" alt="Project photo">
 </div>
 
-
 <footer class="footer">
-    © 2026 Hardy Homes — Hardy, Arkansas USA
+    <div class="container footer-inner">
+        <div class="footer-brand">
+            <img src="images/hardyhomeslogo.png" alt="Hardy Homes" class="footer-logo">
+            <span>Hardy Homes</span>
+        </div>
+        <div class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="shed-buy-now.html">Shop Kits</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="footer-copy">© 2026 Hardy Homes — Hardy, Arkansas USA</div>
+    </div>
+    <div class="partner-bar">
+        <div class="container">
+            <div class="partner-inner">
+                <span class="partner-label">Our Partners & Friends</span>
+                <a href="https://your-landscaping-site.com" class="partner-link" target="_blank" rel="noopener">🌿 Hardy Landscaping</a>
+                <span class="partner-sep">·</span>
+                <a href="https://cydneyskeens.com" class="partner-link" target="_blank" rel="noopener">🏠 CydneySkeens.com</a>
+            </div>
+        </div>
+    </div>
 </footer>
 
 <script src="gallery.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

@@ -3,63 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shed Kits — Hardy Homes</title>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Steel Framing Kits — Hardy Homes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="nav">
+<header class="nav" id="navbar">
     <div class="container nav-grid">
-
-        <!-- Left: Logo -->
         <div class="nav-left">
             <img src="images/hardyhomeslogo.png" alt="Hardy Homes Logo" class="nav-logo">
         </div>
-
-        <!-- Center: Title -->
         <div class="nav-center">
-            <h1 class="logo-text">Framing Kits</h1>
+            <span class="logo-text">Framing Kits</span>
         </div>
-
-        <!-- Right: Links -->
         <nav class="nav-right nav-links">
             <a href="index.html">Home</a>
             <a href="gallery.html">Gallery</a>
-            <a href="#contact">Contact</a>
+            <a href="shed-buy-now.html" class="active">Shop</a>
+            <a href="index.html#contact">Contact</a>
         </nav>
-
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
     </div>
+    <nav class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="shed-buy-now.html">Shop</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
 </header>
 
-
-<section class="section" style="padding-top:120px;">
+<!-- Page Hero -->
+<div class="page-hero">
     <div class="container">
-        <h2 class="section-title">Steel Shed Kits</h2>
-        <p class="text-lg center">
-            Choose from our most popular steel shed frames. Kits include the engineered steel frame package,
-            fasteners, and layout plans. Exterior finishes, doors, and windows can be customized.
-        </p>
+        <span class="section-tag light">Steel Framing</span>
+        <h2>Steel Shed Kits</h2>
+        <p>Choose from our most popular steel shed frames. Kits include the engineered steel frame package, fasteners, and layout plans. Exterior finishes, doors, and windows can be customized.</p>
+    </div>
+</div>
 
-        <div class="grid-3" style="margin-top:40px;">
+<!-- PRODUCTS -->
+<section class="section" style="background: var(--cream);">
+    <div class="container">
+        <div class="grid-3">
 
-            <!-- Greenhouse / She Shed Combo -->
-            <div class="card">
+            <!-- Greenhouse / She Shed -->
+            <div class="card reveal">
                 <img src="images/greenhouse1.jpeg" class="card-img" alt="Greenhouse / She Shed Combo">
                 <h3>Greenhouse / She Shed Combo</h3>
-                <p class="price">From $7,000</p>
+                <div class="price">From $7,000</div>
                 <ul>
-                    <li>Dual purpose combonation shed unit </li>
+                    <li>Dual purpose combination shed unit</li>
                     <li>Approx. 96 sq ft of floor space</li>
                     <li>Ideal for gardening, studios, storage, or hobby rooms</li>
                 </ul>
-                <a class="btn-dark" href="mailto:cydneyskeens@gmail.com?subject=She Shed&body=I’m interested in the she shed / greenhouse steel frame kit.">
-                    Request Info
-                </a>
+                <div style="display:flex; gap:10px; flex-direction:column; margin-top:auto;">
+                    <button class="btn-dark stripe-card-btn" onclick="handleStripeCheckout('greenhouse', 7000, 'Greenhouse / She Shed Combo')">
+                        Buy Now — $7,000
+                    </button>
+                    <a href="mailto:cydneyskeens@gmail.com?subject=She Shed&body=I'm interested in the she shed / greenhouse steel frame kit." style="font-size:.8rem; color:var(--text-muted); text-align:center; margin-top:4px;">or email to request info</a>
+                </div>
             </div>
 
             <!-- Steel Trusses -->
-            <div class="card">
+            <div class="card reveal" style="--delay:0.1s">
                 <img src="images/eagleslndg.jpeg" class="card-img" alt="Steel Trusses">
                 <h3>Steel Trusses</h3>
                 <ul>
@@ -67,30 +76,139 @@
                     <li>Fully engineered in ScotSteel Software</li>
                     <li>Send us a design for your STEEL TRUSS quote today</li>
                 </ul>
-                <a class="btn-dark" href="mailto:cydneyskeens@gmail.com?subject=Steel Trusses&body=I’m interested in the steel trusses.">
-                    Buy Now
-                </a>
+                <div style="display:flex; gap:10px; flex-direction:column; margin-top:auto;">
+                    <button class="btn-dark stripe-card-btn" onclick="handleStripeCheckout('trusses', 0, 'Steel Trusses — Custom Quote')">
+                        Request a Quote
+                    </button>
+                </div>
             </div>
 
-            <!-- Custom or Onsite Build -->
-            <div class="card">
+            <!-- Custom Designs -->
+            <div class="card reveal" style="--delay:0.2s">
                 <img src="images/custom.jpg" class="card-img" alt="Custom Builds">
-                <h3>Custom Designs and Mobile Roll Forming</h3>
-                <p class="price">Pricing by design</p>
-                <p>Need something different? We can design a steel-framed structures to suit your site, slope, and use.</p>
-                <p>Send us your rough dimensions and use-case, and we’ll help you dial in a solution.</p>
-                <a class="btn-dark" href="mailto:cydneyskeens@gmail.com?subject=Custom Design&body=I’d like to discuss a custom steel frame design.">
-                    Start a Custom Quote
-                </a>
+                <h3>Custom Designs & Mobile Roll Forming</h3>
+                <div class="price" style="font-size:1.3rem;">Pricing by design</div>
+                <p>Need something different? We design steel-framed structures to suit your site, slope, and use.</p>
+                <p>Send your rough dimensions and use-case, and we'll help you dial in a solution.</p>
+                <div style="margin-top:auto;">
+                    <a href="mailto:cydneyskeens@gmail.com?subject=Custom Design&body=I'd like to discuss a custom steel frame design." class="btn-dark">
+                        Start a Custom Quote →
+                    </a>
+                </div>
             </div>
 
         </div>
     </div>
 </section>
 
+<!-- Trust band -->
+<section style="background: var(--charcoal); padding: 50px 0;">
+    <div class="container">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:32px; text-align:center;">
+            <div>
+                <div style="font-size:2rem; margin-bottom:8px;">🔒</div>
+                <div style="color:white; font-weight:600; font-size:.9rem;">Secure Checkout</div>
+                <div style="color:rgba(255,255,255,.45); font-size:.8rem; margin-top:4px;">Powered by Stripe</div>
+            </div>
+            <div>
+                <div style="font-size:2rem; margin-bottom:8px;">📐</div>
+                <div style="color:white; font-weight:600; font-size:.9rem;">Precision Engineered</div>
+                <div style="color:rgba(255,255,255,.45); font-size:.8rem; margin-top:4px;">ScotSteel Software</div>
+            </div>
+            <div>
+                <div style="font-size:2rem; margin-bottom:8px;">🚚</div>
+                <div style="color:white; font-weight:600; font-size:.9rem;">On-Site Fabrication</div>
+                <div style="color:rgba(255,255,255,.45); font-size:.8rem; margin-top:4px;">Mobile Roll Former</div>
+            </div>
+            <div>
+                <div style="font-size:2rem; margin-bottom:8px;">⭐</div>
+                <div style="color:white; font-weight:600; font-size:.9rem;">Hardy, Arkansas</div>
+                <div style="color:rgba(255,255,255,.45); font-size:.8rem; margin-top:4px;">Est. 2020</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stripe Modal (same as index) -->
+<div id="stripeModal" class="modal-overlay">
+    <div class="modal-box">
+        <button class="modal-close" onclick="closeModal()">×</button>
+        <div class="modal-stripe-logo">
+            <svg width="48" height="20" viewBox="0 0 48 20" fill="none"><path d="M8.08 8.08c0-.74.61-1.03 1.62-1.03 1.45 0 3.27.44 4.72 1.22V4.16C12.9 3.57 11.34 3.3 9.72 3.3 5.96 3.3 3.47 5.22 3.47 8.3c0 4.73 6.52 3.97 6.52 6.01 0 .88-.76 1.16-1.82 1.16-1.58 0-3.6-.65-5.2-1.53v4.16c1.77.76 3.55 1.08 5.2 1.08 3.85 0 6.5-1.9 6.5-5.03-.04-5.11-6.59-4.19-6.59-6.07zm15.98-3.62l-3.1.66v2.26h-1.9v3.5h1.9v7.22h3.62v-7.22h2.39l.35-3.5h-2.74V4.46zm8.47 3.04c-1.24 0-2.04.58-2.5 1.01l-.16-.8h-3.22v14.7l3.65-.77.01-3.57c.47.34 1.16.82 2.2.82 2.23 0 4.26-1.79 4.26-5.73-.03-3.61-2.06-5.66-4.24-5.66zm-.74 8.73c-.73 0-1.17-.26-1.47-.58l-.02-4.6c.32-.36.78-.6 1.49-.6 1.14 0 1.92 1.28 1.92 2.88 0 1.64-.77 2.9-1.92 2.9z" fill="#635bff"/></svg>
+            <span>Powered by Stripe</span>
+        </div>
+        <h3 id="modalTitle">Complete Your Order</h3>
+        <p id="modalDesc" style="color:#666; font-size:.9rem; margin:.5rem 0 1.5rem;"></p>
+        <div class="stripe-form">
+            <div class="form-row">
+                <label>Full Name</label>
+                <input type="text" id="sName" placeholder="Jane Hardy" />
+            </div>
+            <div class="form-row">
+                <label>Email Address</label>
+                <input type="email" id="sEmail" placeholder="jane@example.com" />
+            </div>
+            <div class="form-row">
+                <label>Phone</label>
+                <input type="tel" id="sPhone" placeholder="+1 (555) 000-0000" />
+            </div>
+            <div class="form-row">
+                <label>Delivery ZIP Code</label>
+                <input type="text" id="sZip" placeholder="72543" />
+            </div>
+            <div class="form-row">
+                <label>Card Number</label>
+                <div class="fake-card-input">
+                    <input type="text" placeholder="1234 5678 9012 3456" maxlength="19" />
+                    <span>🔒</span>
+                </div>
+            </div>
+            <div class="form-row-split">
+                <div class="form-row">
+                    <label>Expiry</label>
+                    <input type="text" placeholder="MM / YY" maxlength="7" />
+                </div>
+                <div class="form-row">
+                    <label>CVC</label>
+                    <input type="text" placeholder="123" maxlength="4" />
+                </div>
+            </div>
+        </div>
+        <div class="modal-total" id="modalTotal"></div>
+        <button class="modal-pay-btn" onclick="submitPayment()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Complete Secure Purchase
+        </button>
+        <p class="modal-disclaimer">Your payment is secured by Stripe encryption. Hardy Homes will contact you within 1 business day to confirm your order and shipping details.</p>
+    </div>
+</div>
+
 <footer class="footer">
-    © 2026 Hardy Homes — Hardy, Arkansas USA
+    <div class="container footer-inner">
+        <div class="footer-brand">
+            <img src="images/hardyhomeslogo.png" alt="Hardy Homes" class="footer-logo">
+            <span>Hardy Homes</span>
+        </div>
+        <div class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="shed-buy-now.html">Shop Kits</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="footer-copy">© 2026 Hardy Homes — Hardy, Arkansas USA</div>
+    </div>
+    <div class="partner-bar">
+        <div class="container">
+            <div class="partner-inner">
+                <span class="partner-label">Our Partners & Friends</span>
+                <a href="https://your-landscaping-site.com" class="partner-link" target="_blank" rel="noopener">🌿 Hardy Landscaping</a>
+                <span class="partner-sep">·</span>
+                <a href="https://cydneyskeens.com" class="partner-link" target="_blank" rel="noopener">🏠 CydneySkeens.com</a>
+            </div>
+        </div>
+    </div>
 </footer>
 
+<script src="main.js"></script>
 </body>
 </html>
