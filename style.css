@@ -1608,3 +1608,39 @@ a { color: inherit; text-decoration: none; }
     .section { padding: 60px 0; }
     .hero-content { padding: 0 5%; }
 }
+
+/* ═══════════════════════════
+   CONSULTATION MODAL
+═══════════════════════════ */
+.consult-modal-box {
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.consult-notice {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(201, 185, 154, 0.12);
+    border: 1px solid rgba(201, 185, 154, 0.35);
+    border-radius: var(--radius);
+    color: var(--tan);
+    font-size: 0.82rem;
+    padding: 10px 14px;
+    margin: 10px 0 18px;
+    line-height: 1.5;
+}
+
+.consult-notice svg {
+    flex-shrink: 0;
+    color: var(--tan);
+}
+
+.consult-notice strong {
+    font-weight: 700;
+}
+
+/* Date input dark theming */
+.stripe-form input[type="date"] {
+    color-scheme: dark;
+}

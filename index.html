@@ -6,53 +6,6 @@
     <title>Hardy Homes — Precision Steel Framing | Hardy, Arkansas</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
-    <style>
-    /* ── Roll-Former SVG illustration styles ── */
-    .rf-svg-wrap {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        max-width: 560px;
-        margin: 0 auto;
-    }
-    .rf-svg-wrap svg {
-        width: 100%;
-        height: auto;
-        filter: drop-shadow(0 24px 48px rgba(0,0,0,0.45));
-        border-radius: 12px;
-    }
-    /* animated steel strip */
-    @keyframes stripMove {
-        0%   { stroke-dashoffset: 0; }
-        100% { stroke-dashoffset: -120; }
-    }
-    .strip-anim {
-        stroke-dasharray: 20 8;
-        animation: stripMove 1.6s linear infinite;
-    }
-    /* spinning roller */
-    @keyframes spin {
-        from { transform: rotate(0deg); }
-        to   { transform: rotate(360deg); }
-    }
-    .roller-spin {
-        transform-origin: center;
-        animation: spin 2s linear infinite;
-    }
-    .roller-spin-r {
-        transform-origin: center;
-        animation: spin 2s linear infinite reverse;
-    }
-    /* pulse dot */
-    @keyframes pulse {
-        0%,100% { opacity:1; r: 4; }
-        50%      { opacity:.5; r: 6; }
-    }
-    .pulse-dot { animation: pulse 1.4s ease-in-out infinite; }
-    </style>
 </head>
 <body>
 
@@ -121,17 +74,17 @@
 
             <a href="shed-buy-now.html" class="service-card reveal">
                 <div class="service-img-wrap">
-                    <img src="images/greenhouse1.jpeg" alt="Steel Shed Kits">
+                    <img src="images/greenhouse1.jpeg" alt="Framing Packages">
                     <div class="service-img-tag">Ready-to-Build</div>
                 </div>
                 <div class="service-body">
-                    <h3>Steel Shed Kits</h3>
+                    <h3>Framing Packages</h3>
                     <p>Pre-cut, labeled steel frames shipped flat. Available in multiple sizes — ideal for storage, workshops, and backyard studios.</p>
                     <span class="service-link">View Models & Pricing →</span>
                 </div>
             </a>
 
-            <a href="#contact" class="service-card reveal" style="--delay:0.1s">
+            <a href="gallery.html" class="service-card reveal" style="--delay:0.1s">
                 <div class="service-img-wrap">
                     <img src="images/tinyhome1.jpeg" alt="Tiny Home">
                     <div class="service-img-tag">Custom Build</div>
@@ -139,33 +92,33 @@
                 <div class="service-body">
                     <h3>Tiny Homes & ADUs</h3>
                     <p>High-end steel cottages for guest houses, short-term rentals, or full-time living. Built to spec from the ground up.</p>
-                    <span class="service-link">Schedule a Consultation →</span>
+                    <span class="service-link">View Project Gallery →</span>
                 </div>
             </a>
 
-            <a href="gallery.html" class="service-card reveal" style="--delay:0.2s">
+            <a href="https://cydneyskeens.com" target="_blank" rel="noopener" class="service-card reveal" style="--delay:0.2s">
                 <div class="service-img-wrap">
-                    <img src="images/custom.jpg" alt="On-Site Fabrication">
+                    <img src="images/roll.jpeg" alt="On-Site Fabrication">
                     <div class="service-img-tag">Mobile Fabrication</div>
                 </div>
                 <div class="service-body">
                     <h3>On-Site Fabrication</h3>
                     <p>Residential, commercial, and agricultural builds — fabricated on location with our mobile roll-forming unit.</p>
-                    <span class="service-link">View Projects →</span>
+                    <span class="service-link">Learn More at CydneySkeens.com →</span>
                 </div>
             </a>
 
-            <a href="#framing-kits" class="service-card reveal" style="--delay:0.3s">
+            <div class="service-card reveal" style="--delay:0.3s; cursor:pointer;" onclick="openConsultModal()">
                 <div class="service-img-wrap">
-                    <img src="images/eagleslndg.jpeg" alt="Framing Kits">
-                    <div class="service-img-tag">Steel Components</div>
+                    <img src="images/roll-person.jpeg" alt="Design Consultation">
+                    <div class="service-img-tag">Book a Session</div>
                 </div>
                 <div class="service-body">
-                    <h3>Framing Kits</h3>
-                    <p>Pre-cut, labeled steel framing kits for DIY builders and contractors. Exact lengths — no field cutting required.</p>
-                    <span class="service-link">Browse Kits →</span>
+                    <h3>Consultation Services</h3>
+                    <p>1-hour design consultation for structure review, material planning, and project scoping — with a licensed steel framing expert.</p>
+                    <span class="service-link">Book Your Consultation →</span>
                 </div>
-            </a>
+            </div>
 
         </div>
     </div>
@@ -299,290 +252,9 @@
                 </ul>
                 <a href="#contact" class="btn-primary" style="margin-top:1.5rem; display:inline-block;">Book the Roll Former</a>
             </div>
-
-            <!-- ══════════════════════════════════════════
-                 SVG ILLUSTRATION — Mobile Roll-Former Unit
-                 Replaces roll-former.png
-            ══════════════════════════════════════════ -->
             <div class="roll-former-visual reveal" style="--delay:0.2s">
-                <div class="rf-svg-wrap">
-                    <svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hardy Homes Mobile Roll-Former Unit illustration">
-                        <defs>
-                            <!-- Sky gradient -->
-                            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="0%" stop-color="#1a2634"/>
-                                <stop offset="100%" stop-color="#2c3e50"/>
-                            </linearGradient>
-                            <!-- Ground gradient -->
-                            <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="0%" stop-color="#3d3228"/>
-                                <stop offset="100%" stop-color="#2a221a"/>
-                            </linearGradient>
-                            <!-- Trailer body gradient -->
-                            <linearGradient id="trailerBody" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="0%" stop-color="#c0c8d0"/>
-                                <stop offset="100%" stop-color="#8a9299"/>
-                            </linearGradient>
-                            <!-- Cab gradient -->
-                            <linearGradient id="cabGrad" x1="0" y1="0" x2="1" y2="1">
-                                <stop offset="0%" stop-color="#d94f00"/>
-                                <stop offset="60%" stop-color="#b53d00"/>
-                                <stop offset="100%" stop-color="#8c2e00"/>
-                            </linearGradient>
-                            <!-- Machine body -->
-                            <linearGradient id="machineGrad" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="0%" stop-color="#4a5568"/>
-                                <stop offset="100%" stop-color="#2d3748"/>
-                            </linearGradient>
-                            <!-- Steel strip glow -->
-                            <linearGradient id="steelStrip" x1="0" y1="0" x2="1" y2="0">
-                                <stop offset="0%" stop-color="#a0b4c8" stop-opacity="0.3"/>
-                                <stop offset="40%" stop-color="#d4e6f4"/>
-                                <stop offset="60%" stop-color="#e8f4ff"/>
-                                <stop offset="100%" stop-color="#a0b4c8" stop-opacity="0.3"/>
-                            </linearGradient>
-                            <!-- Roller metal -->
-                            <radialGradient id="rollerMetal" cx="40%" cy="35%" r="60%">
-                                <stop offset="0%" stop-color="#d0d8e0"/>
-                                <stop offset="100%" stop-color="#5a6472"/>
-                            </radialGradient>
-                            <!-- Wheel -->
-                            <radialGradient id="wheelGrad" cx="40%" cy="35%" r="65%">
-                                <stop offset="0%" stop-color="#555"/>
-                                <stop offset="100%" stop-color="#111"/>
-                            </radialGradient>
-                            <!-- Control panel -->
-                            <linearGradient id="panelGrad" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="0%" stop-color="#1a1e24"/>
-                                <stop offset="100%" stop-color="#0d1016"/>
-                            </linearGradient>
-                            <!-- Sparks / light effect -->
-                            <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
-                                <feGaussianBlur stdDeviation="2.5" result="blur"/>
-                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                            </filter>
-                            <filter id="softglow" x="-20%" y="-20%" width="140%" height="140%">
-                                <feGaussianBlur stdDeviation="4" result="blur"/>
-                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                            </filter>
-                        </defs>
-
-                        <!-- ── Background ── -->
-                        <rect width="560" height="360" fill="url(#sky)" rx="12"/>
-
-                        <!-- Stars -->
-                        <circle cx="40"  cy="30"  r="1"   fill="#fff" opacity=".5"/>
-                        <circle cx="120" cy="18"  r="1.2" fill="#fff" opacity=".6"/>
-                        <circle cx="200" cy="40"  r="0.8" fill="#fff" opacity=".4"/>
-                        <circle cx="320" cy="22"  r="1"   fill="#fff" opacity=".5"/>
-                        <circle cx="430" cy="35"  r="1.3" fill="#fff" opacity=".6"/>
-                        <circle cx="510" cy="15"  r="0.9" fill="#fff" opacity=".4"/>
-                        <circle cx="85"  cy="55"  r="0.7" fill="#fff" opacity=".3"/>
-                        <circle cx="470" cy="58"  r="1"   fill="#fff" opacity=".4"/>
-
-                        <!-- Moon -->
-                        <circle cx="490" cy="38" r="16" fill="#dde8f0" opacity=".18"/>
-                        <circle cx="496" cy="33" r="13" fill="#1a2634" opacity=".7"/>
-
-                        <!-- Ground -->
-                        <rect x="0" y="296" width="560" height="64" fill="url(#ground)" rx="0"/>
-                        <!-- Ground texture lines -->
-                        <line x1="0"   y1="302" x2="560" y2="302" stroke="#4a3c30" stroke-width="1" opacity=".5"/>
-                        <line x1="0"   y1="310" x2="560" y2="310" stroke="#3a2e24" stroke-width="1" opacity=".3"/>
-
-                        <!-- ── TRAILER / FLATBED ── -->
-                        <!-- Trailer frame -->
-                        <rect x="60" y="258" width="390" height="14" rx="3" fill="#5a6270"/>
-                        <!-- Trailer deck -->
-                        <rect x="62" y="238" width="386" height="22" rx="2" fill="#6e7a88"/>
-                        <!-- Deck wood planks illusion -->
-                        <line x1="80"  y1="238" x2="80"  y2="260" stroke="#5a6270" stroke-width="1" opacity=".5"/>
-                        <line x1="120" y1="238" x2="120" y2="260" stroke="#5a6270" stroke-width="1" opacity=".5"/>
-                        <line x1="160" y1="238" x2="160" y2="260" stroke="#5a6270" stroke-width="1" opacity=".5"/>
-                        <line x1="200" y1="238" x2="200" y2="260" stroke="#5a6270" stroke-width="1" opacity=".5"/>
-                        <line x1="240" y1="238" x2="240" y2="260" stroke="#5a6270" stroke-width="1" opacity=".5"/>
-                        <line x1="280" y1="238" x2="280" y2="260" stroke="#5a6270" stroke-width="1" opacity=".5"/>
-                        <line x1="320" y1="238" x2="320" y2="260" stroke="#5a6270" stroke-width="1" opacity=".5"/>
-                        <line x1="360" y1="238" x2="360" y2="260" stroke="#5a6270" stroke-width="1" opacity=".5"/>
-                        <line x1="400" y1="238" x2="400" y2="260" stroke="#5a6270" stroke-width="1" opacity=".5"/>
-                        <!-- Hitch arm -->
-                        <rect x="52" y="262" width="24" height="7" rx="2" fill="#444c58"/>
-
-                        <!-- ── WHEELS ── -->
-                        <!-- Trailer rear wheels (pair) -->
-                        <circle cx="390" cy="280" r="22" fill="#1a1e24" stroke="#333" stroke-width="2"/>
-                        <circle cx="390" cy="280" r="16" fill="url(#wheelGrad)" stroke="#555" stroke-width="1.5"/>
-                        <circle cx="390" cy="280" r="6"  fill="#2a2e36"/>
-                        <line x1="390" y1="264" x2="390" y2="296" stroke="#666" stroke-width="1.5" opacity=".6"/>
-                        <line x1="374" y1="280" x2="406" y2="280" stroke="#666" stroke-width="1.5" opacity=".6"/>
-                        <line x1="378" y1="268" x2="402" y2="292" stroke="#666" stroke-width="1.2" opacity=".4"/>
-                        <line x1="402" y1="268" x2="378" y2="292" stroke="#666" stroke-width="1.2" opacity=".4"/>
-
-                        <circle cx="350" cy="280" r="22" fill="#1a1e24" stroke="#333" stroke-width="2"/>
-                        <circle cx="350" cy="280" r="16" fill="url(#wheelGrad)" stroke="#555" stroke-width="1.5"/>
-                        <circle cx="350" cy="280" r="6"  fill="#2a2e36"/>
-                        <line x1="350" y1="264" x2="350" y2="296" stroke="#666" stroke-width="1.5" opacity=".6"/>
-                        <line x1="334" y1="280" x2="366" y2="280" stroke="#666" stroke-width="1.5" opacity=".6"/>
-
-                        <!-- Trailer mid wheels -->
-                        <circle cx="180" cy="280" r="20" fill="#1a1e24" stroke="#333" stroke-width="2"/>
-                        <circle cx="180" cy="280" r="14" fill="url(#wheelGrad)" stroke="#555" stroke-width="1.5"/>
-                        <circle cx="180" cy="280" r="5"  fill="#2a2e36"/>
-                        <line x1="180" y1="266" x2="180" y2="294" stroke="#666" stroke-width="1.5" opacity=".6"/>
-                        <line x1="166" y1="280" x2="194" y2="280" stroke="#666" stroke-width="1.5" opacity=".6"/>
-
-                        <!-- ── TRUCK CAB ── -->
-                        <!-- Cab body -->
-                        <path d="M18 200 Q20 186 36 182 L90 178 Q110 176 118 192 L126 238 L18 238 Z" fill="url(#cabGrad)"/>
-                        <!-- Windshield -->
-                        <path d="M38 184 L88 180 Q106 179 112 192 L118 212 L32 212 Z" fill="#1a2634" opacity=".8"/>
-                        <path d="M38 184 L88 180 Q106 179 112 192 L118 212 L32 212 Z" fill="none" stroke="#a0b4c8" stroke-width="1" opacity=".4"/>
-                        <!-- Windshield reflections -->
-                        <line x1="42" y1="186" x2="50" y2="210" stroke="#fff" stroke-width="1" opacity=".15"/>
-                        <line x1="55" y1="183" x2="63" y2="210" stroke="#fff" stroke-width="0.8" opacity=".1"/>
-                        <!-- Cab side window -->
-                        <rect x="20" y="196" width="18" height="20" rx="2" fill="#1a2634" opacity=".7"/>
-                        <!-- Cab door panel -->
-                        <path d="M18 212 L126 212 L126 238 L18 238 Z" fill="#a03500" opacity=".4"/>
-                        <!-- Door line -->
-                        <line x1="62" y1="212" x2="62" y2="238" stroke="#8c2e00" stroke-width="1.5" opacity=".6"/>
-                        <!-- Door handle -->
-                        <rect x="52" y="224" width="8" height="3" rx="1.5" fill="#d0a060" opacity=".8"/>
-                        <!-- Cab headlights -->
-                        <ellipse cx="22" cy="235" rx="6" ry="4" fill="#ffe080" filter="url(#softglow)" opacity=".9"/>
-                        <ellipse cx="22" cy="235" rx="3" ry="2" fill="#fff" opacity=".95"/>
-                        <!-- Exhaust pipe -->
-                        <rect x="108" y="178" width="5" height="28" rx="2" fill="#3a4250"/>
-                        <!-- Exhaust smoke puffs -->
-                        <circle cx="110" cy="172" r="5" fill="#8a9299" opacity=".25"/>
-                        <circle cx="112" cy="163" r="4" fill="#8a9299" opacity=".18"/>
-                        <circle cx="109" cy="155" r="3" fill="#8a9299" opacity=".10"/>
-                        <!-- Cab wheel -->
-                        <circle cx="96" cy="255" r="20" fill="#1a1e24" stroke="#333" stroke-width="2"/>
-                        <circle cx="96" cy="255" r="14" fill="url(#wheelGrad)" stroke="#555" stroke-width="1.5"/>
-                        <circle cx="96" cy="255" r="5"  fill="#2a2e36"/>
-                        <line x1="96" y1="241" x2="96" y2="269" stroke="#666" stroke-width="1.5" opacity=".6"/>
-                        <line x1="82" y1="255" x2="110" y2="255" stroke="#666" stroke-width="1.5" opacity=".6"/>
-
-                        <circle cx="36" cy="255" r="20" fill="#1a1e24" stroke="#333" stroke-width="2"/>
-                        <circle cx="36" cy="255" r="14" fill="url(#wheelGrad)" stroke="#555" stroke-width="1.5"/>
-                        <circle cx="36" cy="255" r="5"  fill="#2a2e36"/>
-                        <line x1="36" y1="241" x2="36" y2="269" stroke="#666" stroke-width="1.5" opacity=".6"/>
-                        <line x1="22" y1="255" x2="50" y2="255" stroke="#666" stroke-width="1.5" opacity=".6"/>
-
-                        <!-- ── ROLL-FORMER MACHINE BODY ── -->
-                        <!-- Main housing -->
-                        <rect x="130" y="140" width="290" height="100" rx="6" fill="url(#machineGrad)" stroke="#4a5568" stroke-width="1.5"/>
-                        <!-- Machine top panel -->
-                        <rect x="130" y="140" width="290" height="18" rx="4" fill="#5a6880" opacity=".6"/>
-                        <!-- Machine ribbing / panels -->
-                        <rect x="142" y="162" width="60"  height="68" rx="3" fill="#3a4250" stroke="#4a5568" stroke-width="1"/>
-                        <rect x="212" y="162" width="80"  height="68" rx="3" fill="#3a4250" stroke="#4a5568" stroke-width="1"/>
-                        <rect x="302" y="162" width="60"  height="68" rx="3" fill="#3a4250" stroke="#4a5568" stroke-width="1"/>
-                        <rect x="372" y="162" width="38"  height="68" rx="3" fill="#3a4250" stroke="#4a5568" stroke-width="1"/>
-
-                        <!-- ── CONTROL PANEL ── -->
-                        <rect x="215" y="168" width="74" height="56" rx="4" fill="url(#panelGrad)" stroke="#2a3040" stroke-width="1.5"/>
-                        <!-- Screen -->
-                        <rect x="220" y="172" width="50" height="28" rx="2" fill="#0a2a1a" stroke="#1a4a2a" stroke-width="1"/>
-                        <!-- Screen content (waveform lines) -->
-                        <polyline points="222,186 228,180 234,190 240,178 246,186 252,174 258,183 264,179 268,186" fill="none" stroke="#00e676" stroke-width="1.2" opacity=".85"/>
-                        <!-- Indicator lights row -->
-                        <circle cx="225" cy="208" r="3.5" fill="#00e676" filter="url(#glow)" opacity=".9"/>
-                        <circle cx="238" cy="208" r="3.5" fill="#ffb300" filter="url(#glow)" opacity=".9"/>
-                        <circle cx="251" cy="208" r="3.5" fill="#00e676" filter="url(#glow)" opacity=".9"/>
-                        <!-- Pulse on first dot -->
-                        <circle cx="225" cy="208" r="4" fill="none" stroke="#00e676" stroke-width="1" class="pulse-dot"/>
-                        <!-- Buttons -->
-                        <rect x="263" y="200" width="22" height="8" rx="2" fill="#1a5a3a" stroke="#2a7a4a" stroke-width="1"/>
-                        <rect x="263" y="212" width="22" height="8" rx="2" fill="#5a1a1a" stroke="#7a2a2a" stroke-width="1"/>
-                        <!-- Dial -->
-                        <circle cx="280" cy="188" r="7" fill="#2a3040" stroke="#3a4252" stroke-width="1.5"/>
-                        <line x1="280" y1="183" x2="280" y2="186" stroke="#a0b0c0" stroke-width="1.5" stroke-linecap="round"/>
-
-                        <!-- ── ROLLERS (visible through side panel cutaway) ── -->
-                        <!-- Roller 1 -->
-                        <g transform="translate(155, 196)">
-                            <ellipse cx="0" cy="0" rx="14" ry="14" fill="url(#rollerMetal)" stroke="#7a8a9a" stroke-width="1.5" class="roller-spin">
-                                <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="2s" repeatCount="indefinite"/>
-                            </ellipse>
-                            <circle cx="0" cy="0" r="4" fill="#2a3040" stroke="#3a4a5a" stroke-width="1"/>
-                            <line x1="-14" y1="0" x2="14" y2="0" stroke="#9aaab8" stroke-width="1" opacity=".3">
-                                <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="2s" repeatCount="indefinite"/>
-                            </line>
-                        </g>
-                        <!-- Roller 2 -->
-                        <g transform="translate(155, 224)">
-                            <ellipse cx="0" cy="0" rx="14" ry="14" fill="url(#rollerMetal)" stroke="#7a8a9a" stroke-width="1.5">
-                                <animateTransform attributeName="transform" type="rotate" from="0" to="-360" dur="2s" repeatCount="indefinite"/>
-                            </ellipse>
-                            <circle cx="0" cy="0" r="4" fill="#2a3040" stroke="#3a4a5a" stroke-width="1"/>
-                        </g>
-                        <!-- Roller axle -->
-                        <rect x="141" y="194" width="28" height="3" rx="1" fill="#8a9ab0" opacity=".7"/>
-                        <rect x="141" y="222" width="28" height="3" rx="1" fill="#8a9ab0" opacity=".7"/>
-
-                        <!-- ── STEEL STRIP (output) ── -->
-                        <!-- Strip coming out right side -->
-                        <rect x="370" y="206" width="130" height="8" rx="2" fill="url(#steelStrip)" stroke="#a0b4c8" stroke-width="0.8"/>
-                        <rect x="370" y="206" width="130" height="8" rx="2" fill="none" stroke="#d4e6f4" stroke-width="0.5" opacity=".5" class="strip-anim"
-                              stroke-dasharray="18 6" stroke-dashoffset="0"/>
-                        <!-- Strip highlight -->
-                        <rect x="370" y="207" width="130" height="2" rx="1" fill="#fff" opacity=".25"/>
-                        <!-- Strip exit guide -->
-                        <rect x="362" y="200" width="14" height="20" rx="2" fill="#4a5568" stroke="#5a6880" stroke-width="1"/>
-
-                        <!-- ── FORMED C-STUD OUTPUT ── -->
-                        <!-- Labeled cut piece hanging off right -->
-                        <rect x="490" y="202" width="50" height="16" rx="2" fill="#7a8a9a" stroke="#9aaab8" stroke-width="1"/>
-                        <rect x="490" y="202" width="50" height="4" rx="1" fill="#9aaab8" opacity=".5"/>
-                        <!-- Label tag -->
-                        <rect x="495" y="220" width="40" height="14" rx="2" fill="#fff8e0" stroke="#c0a040" stroke-width="1"/>
-                        <line x1="515" y1="218" x2="515" y2="220" stroke="#c0a040" stroke-width="1"/>
-                        <line x1="510" y1="226" x2="530" y2="226" stroke="#a08030" stroke-width="0.8" opacity=".6"/>
-                        <line x1="510" y1="230" x2="525" y2="230" stroke="#a08030" stroke-width="0.8" opacity=".4"/>
-                        <!-- Cut sparks effect -->
-                        <circle cx="490" cy="210" r="2" fill="#ffcc00" filter="url(#glow)" opacity=".7" class="pulse-dot"/>
-
-                        <!-- ── MACHINE TOP DETAILS ── -->
-                        <!-- Warning stripe -->
-                        <rect x="135" y="143" width="278" height="6" rx="2" fill="none" stroke="#f0a000" stroke-width="1" stroke-dasharray="10 6" opacity=".5"/>
-                        <!-- Latch bolts -->
-                        <circle cx="148" cy="147" r="3" fill="#8a9ab0" stroke="#6a7a8a" stroke-width="1"/>
-                        <circle cx="402" cy="147" r="3" fill="#8a9ab0" stroke="#6a7a8a" stroke-width="1"/>
-                        <!-- Ventilation slots -->
-                        <line x1="155" y1="152" x2="175" y2="152" stroke="#2a3040" stroke-width="2" stroke-linecap="round"/>
-                        <line x1="155" y1="157" x2="175" y2="157" stroke="#2a3040" stroke-width="2" stroke-linecap="round"/>
-                        <line x1="155" y1="162" x2="175" y2="162" stroke="#2a3040" stroke-width="2" stroke-linecap="round"/>
-
-                        <!-- ── BRANDING ON MACHINE ── -->
-                        <rect x="330" y="172" width="62" height="24" rx="3" fill="#1a2030" stroke="#2a3040" stroke-width="1"/>
-                        <text x="361" y="181" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="6" font-weight="600" fill="#d4e6f4" letter-spacing="0.5">HARDY</text>
-                        <text x="361" y="191" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="5" fill="#7a9ab0" letter-spacing="1">HOMES</text>
-
-                        <!-- ── SAFETY LABELS ── -->
-                        <rect x="144" y="198" width="20" height="10" rx="1" fill="#f0c000" stroke="#c09000" stroke-width="0.8"/>
-                        <text x="154" y="206" text-anchor="middle" font-family="sans-serif" font-size="5" font-weight="700" fill="#1a1200">⚠</text>
-
-                        <!-- ── GROUND SHADOW ── -->
-                        <ellipse cx="290" cy="298" rx="240" ry="6" fill="#000" opacity=".25"/>
-
-                        <!-- ── LABEL CALLOUT ── -->
-                        <line x1="220" y1="138" x2="220" y2="108" stroke="#a0b4c8" stroke-width="1" stroke-dasharray="4 3" opacity=".6"/>
-                        <circle cx="220" cy="108" r="2" fill="#a0b4c8" opacity=".7"/>
-                        <rect x="140" y="88" width="160" height="22" rx="4" fill="#0d1520" stroke="#2a4060" stroke-width="1" opacity=".92"/>
-                        <text x="220" y="103" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="9" fill="#d4e6f4" letter-spacing="0.5">MOBILE ROLL-FORMER UNIT</text>
-
-                        <!-- Output arrow label -->
-                        <line x1="490" y1="185" x2="490" y2="200" stroke="#a0b4c8" stroke-width="1" stroke-dasharray="4 3" opacity=".6"/>
-                        <rect x="440" y="168" width="100" height="18" rx="4" fill="#0d1520" stroke="#2a4060" stroke-width="1" opacity=".9"/>
-                        <text x="490" y="181" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="8" fill="#00e676" letter-spacing="0.3">FORMED STEEL OUTPUT</text>
-
-                    </svg>
-                </div>
+                <img src="images/roll.jpeg" alt="Hardy Homes Mobile Roll Forming Unit" class="rf-photo">
             </div>
-            <!-- ── END SVG ── -->
-
         </div>
     </div>
 </section>
@@ -826,7 +498,7 @@
             <div class="affiliates-inner">
                 <span class="affiliates-label">Affiliates</span>
                 <div class="affiliates-cards">
-                    <a href="https://your-landscaping-site.com" class="affiliate-card" target="_blank" rel="noopener">
+                    <a href="https://cls23.com" class="affiliate-card" target="_blank" rel="noopener">
                         <div class="affiliate-icon">
                             <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="18" fill="rgba(74,120,80,0.15)"/><path d="M20 32 C20 32 10 26 10 18 C10 13 14.5 9 20 9 C25.5 9 30 13 30 18 C30 26 20 32 20 32Z" fill="rgba(74,120,80,0.3)" stroke="#4a7850" stroke-width="1.5"/><path d="M20 32 L20 20 M14 16 Q17 20 20 20 M26 16 Q23 20 20 20" stroke="#4a7850" stroke-width="1.5" stroke-linecap="round"/></svg>
                         </div>
@@ -849,6 +521,81 @@
         </div>
     </div>
 </footer>
+
+<!-- Consultation Booking Modal -->
+<div id="consultModal" class="modal-overlay">
+    <div class="modal-box consult-modal-box">
+        <button class="modal-close" onclick="closeConsultModal()">×</button>
+        <div class="modal-stripe-logo">
+            <svg width="48" height="20" viewBox="0 0 48 20" fill="none"><path d="M8.08 8.08c0-.74.61-1.03 1.62-1.03 1.45 0 3.27.44 4.72 1.22V4.16C12.9 3.57 11.34 3.3 9.72 3.3 5.96 3.3 3.47 5.22 3.47 8.3c0 4.73 6.52 3.97 6.52 6.01 0 .88-.76 1.16-1.82 1.16-1.58 0-3.6-.65-5.2-1.53v4.16c1.77.76 3.55 1.08 5.2 1.08 3.85 0 6.5-1.9 6.5-5.03-.04-5.11-6.59-4.19-6.59-6.07zm15.98-3.62l-3.1.66v2.26h-1.9v3.5h1.9v7.22h3.62v-7.22h2.39l.35-3.5h-2.74V4.46zm8.47 3.04c-1.24 0-2.04.58-2.5 1.01l-.16-.8h-3.22v14.7l3.65-.77.01-3.57c.47.34 1.16.82 2.2.82 2.23 0 4.26-1.79 4.26-5.73-.03-3.61-2.06-5.66-4.24-5.66zm-.74 8.73c-.73 0-1.17-.26-1.47-.58l-.02-4.6c.32-.36.78-.6 1.49-.6 1.14 0 1.92 1.28 1.92 2.88 0 1.64-.77 2.9-1.92 2.9z" fill="#635bff"/></svg>
+            <span>Powered by Stripe</span>
+        </div>
+        <h3>Book a Design Consultation</h3>
+        <p style="color:#888; font-size:.88rem; margin:.4rem 0 .2rem; line-height:1.6;">1-hour session with Cydney Skeens — structure review, material planning & project scoping.</p>
+        <div class="consult-notice">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Please submit with at least <strong>4 days prior notice</strong>.
+        </div>
+        <div class="stripe-form">
+            <div class="form-row">
+                <label>Full Name</label>
+                <input type="text" id="cName" placeholder="Jane Hardy" />
+            </div>
+            <div class="form-row">
+                <label>Email Address</label>
+                <input type="email" id="cEmail" placeholder="jane@example.com" />
+            </div>
+            <div class="form-row">
+                <label>Phone</label>
+                <input type="tel" id="cPhone" placeholder="+1 (555) 000-0000" />
+            </div>
+            <div class="form-row">
+                <label>Preferred Date (min. 4 days out)</label>
+                <input type="date" id="cDate" />
+            </div>
+            <div class="form-row">
+                <label>Project Type</label>
+                <select id="cProject">
+                    <option value="">Select your project type…</option>
+                    <option>Residential Home</option>
+                    <option>ADU / Guest House</option>
+                    <option>Tiny Home</option>
+                    <option>Agricultural / Barn</option>
+                    <option>Commercial Structure</option>
+                    <option>Shed / Workshop</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label>Tell us about your project</label>
+                <textarea id="cNotes" placeholder="Rough dimensions, site conditions, goals…" rows="3"></textarea>
+            </div>
+            <div class="form-row">
+                <label>Card Number</label>
+                <div class="fake-card-input">
+                    <input type="text" placeholder="1234 5678 9012 3456" maxlength="19" />
+                    <span>🔒</span>
+                </div>
+            </div>
+            <div class="form-row-split">
+                <div class="form-row">
+                    <label>Expiry</label>
+                    <input type="text" placeholder="MM / YY" maxlength="7" />
+                </div>
+                <div class="form-row">
+                    <label>CVC</label>
+                    <input type="text" placeholder="123" maxlength="4" />
+                </div>
+            </div>
+        </div>
+        <div class="modal-total">Consultation Fee: $150 USD</div>
+        <button class="modal-pay-btn" onclick="submitConsultation()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Reserve My Consultation — $150
+        </button>
+        <p class="modal-disclaimer">Payment secured by Stripe. Cydney will confirm your booking via email within 1 business day. Cancellations with less than 48 hours notice are non-refundable.</p>
+    </div>
+</div>
 
 <script src="main.js"></script>
 </body>

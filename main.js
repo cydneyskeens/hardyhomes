@@ -151,3 +151,50 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
         }
     });
 });
+
+// ── Consultation modal ──
+function openConsultModal() {
+    document.getElementById('consultModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    // Set minimum date to 4 days from today
+    const d = new Date();
+    d.setDate(d.getDate() + 4);
+    const yyyy = d.getFullYear();
+    const mm = String(d.getMonth() + 1).padStart(2, '0');
+    const dd = String(d.getDate()).padStart(2, '0');
+    const minDate = `${yyyy}-${mm}-${dd}`;
+    const dateInput = document.getElementById('cDate');
+    if (dateInput) {
+        dateInput.min = minDate;
+        dateInput.value = minDate;
+    }
+}
+
+function closeConsultModal() {
+    document.getElementById('consultModal').classList.remove('open');
+    document.body.style.overflow = '';
+}
+
+function submitConsultation() {
+    const btn = document.querySelector('#consultModal .modal-pay-btn');
+    btn.textContent = '⏳ Processing...';
+    btn.disabled = true;
+
+    // In production: replace with Stripe Checkout link for consultation
+    // e.g. window.location.href = 'https://buy.stripe.com/your_consult_link';
+
+    setTimeout(() => {
+        closeConsultModal();
+        btn.disabled = false;
+        btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Reserve My Consultation — $150`;
+        showToast('✅ Consultation booked! Cydney will confirm your appointment by email within 1 business day.');
+    }, 1800);
+}
+
+// Close consult modal on backdrop click
+const consultModal = document.getElementById('consultModal');
+if (consultModal) {
+    consultModal.addEventListener('click', (e) => {
+        if (e.target === consultModal) closeConsultModal();
+    });
+}
