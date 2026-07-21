@@ -911,6 +911,17 @@ a { color: inherit; text-decoration: none; }
     padding: 0 24px 20px;
 }
 
+.shipping-disclaimer {
+    text-align: center;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    padding: 0 24px 20px;
+    font-style: italic;
+    border-top: 1px solid var(--cream-alt);
+    margin-top: 8px;
+    padding-top: 14px;
+}
+
 
 /* ═══════════════════════════
    STRIPE MODAL
