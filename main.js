@@ -36,19 +36,14 @@ revealEls.forEach(el => observer.observe(el));
 
 // ── Shop card photo carousels ──
 document.querySelectorAll('.shop-card-media').forEach(media => {
-    const imgs = Array.from(media.querySelectorAll('img')).filter(img => img.src);
+    const imgs = Array.from(media.querySelectorAll('img'));
     if (imgs.length <= 1) return;
-    // make sure only the first is visible at start
-    imgs.forEach((img, i) => {
-        img.style.display = i === 0 ? 'block' : 'none';
-        if (i === 0) img.classList.add('active');
-    });
     let idx = 0;
     setInterval(() => {
-        imgs[idx].style.display = 'none';
+        imgs[idx].classList.add('inactive');
         imgs[idx].classList.remove('active');
         idx = (idx + 1) % imgs.length;
-        imgs[idx].style.display = 'block';
+        imgs[idx].classList.remove('inactive');
         imgs[idx].classList.add('active');
     }, 3500);
 });

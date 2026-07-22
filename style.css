@@ -808,14 +808,22 @@ a { color: inherit; text-decoration: none; }
 
 .shop-card-img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
     display: none;
     border-radius: 0;
 }
 
+.shop-card-img:first-child {
+    display: block;
+}
+
 .shop-card-img.active {
     display: block;
+}
+
+.shop-card-img.inactive {
+    display: none;
 }
 
 .shop-card-media {
@@ -823,7 +831,7 @@ a { color: inherit; text-decoration: none; }
     overflow: hidden;
     border-radius: 0;
     background: #f0efeb;
-    min-height: 200px;
+    min-height: 220px;
 }
 
 .shop-card-header {
