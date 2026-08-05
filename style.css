@@ -911,6 +911,43 @@ a { color: inherit; text-decoration: none; }
     padding: 0 24px 20px;
 }
 
+.shop-shipping-note {
+    text-align: center;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    padding: 0 24px 20px;
+    border-top: 1px solid var(--cream-alt);
+    margin: 0 24px;
+    padding-top: 14px;
+}
+
+.shop-variant-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0 24px 8px;
+}
+
+.shop-variant-group .stripe-btn {
+    width: 100%;
+    margin: 0;
+}
+
+.product-links {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0 24px 16px;
+    text-align: center;
+}
+
+.product-links a {
+    font-size: 0.78rem;
+    color: var(--steel-blue);
+    text-decoration: underline;
+}
+
 
 /* ═══════════════════════════
    STRIPE MODAL

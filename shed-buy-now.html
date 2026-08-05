@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steel Framing Kits — Hardy Homes</title>
+    <title>Steel Framing Kits &amp; Products — Hardy Homes</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,7 +15,7 @@
             <img src="images/hardyhomeslogo.png" alt="Hardy Homes Logo" class="nav-logo">
         </div>
         <div class="nav-center">
-            <span class="logo-text">Framing Kits</span>
+            <span class="logo-text">Hardy Homes</span>
         </div>
         <nav class="nav-right nav-links">
             <a href="index.html">Home</a>
@@ -39,117 +39,156 @@
 <div class="page-hero">
     <div class="container">
         <span class="section-tag light">Online Store</span>
-        <h2>Steel Framing Kits</h2>
-        <p>Choose from our most popular steel shed frames. Kits include the engineered steel frame package, fasteners, and layout plans. Exterior finishes, doors, and windows can be customized.</p>
+        <h2>Steel Framing Kits &amp; Products</h2>
+        <p>Engineered steel trusses, framing kits, and off-grid accessories — ready to ship or built to your custom spec.</p>
     </div>
 </div>
 
-<!-- PRODUCTS — same card layout as homepage shop section -->
+<!-- PRODUCTS -->
 <section class="section shop-section" style="background: var(--cream);">
     <div class="container">
 
         <div class="shop-grid">
 
-            <!-- Starter Shed Kit -->
+            <!-- 1. Container Truss System -->
             <div class="shop-card reveal">
-                <img src="images/greenhouse1.jpeg" class="shop-card-img" alt="Starter Shed Kit" onerror="this.style.display='none'">
+                <img src="images/container-truss-system.jpg" class="shop-card-img" alt="Container Truss System" onerror="this.style.display='none'">
                 <div class="shop-card-header">
-                    <h3>Starter Shed Kit</h3>
-                    <div class="shop-price">$5,500</div>
-                    <div class="shop-price-note">Gable Roof · 10×12 footprint</div>
+                    <h3>Container Truss System</h3>
+                    <div class="shop-price">$600</div>
+                    <div class="shop-price-note">Per Truss</div>
                 </div>
                 <ul class="shop-features">
-                    <li>Pre-cut, labeled steel frame</li>
-                    <li>Assembly guide included</li>
-                    <li>Ships flat — no crane needed</li>
-                    <li>Perfect for storage or backyard workspace</li>
+                    <li>Light-gauge steel truss system</li>
+                    <li>Designed to span between two shipping containers</li>
+                    <li>37' overall span · 20' clear span</li>
+                    <li>Creates a large garage, workshop, or storage structure</li>
                 </ul>
-                <button class="stripe-btn" onclick="handleStripeCheckout('starter', 5500, 'Starter Shed Kit — Gable Roof (10×12)')">
+                <button class="stripe-btn" onclick="handleStripeCheckout('container-truss', 600, 'Container Truss System (per truss)')">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-                    Buy Now — $5,500
+                    Buy Now — $600
                 </button>
                 <p class="stripe-note">🔒 Secure checkout via Stripe</p>
+                <p class="shop-shipping-note">Shipping and delivery are not included. Please contact us for a custom shipping quote or additional information before placing your order.</p>
             </div>
 
-            <!-- Workshop Kit — Featured -->
-            <div class="shop-card featured reveal" style="--delay:0.1s">
-                <div class="featured-badge">Most Popular</div>
-                <img src="images/tinyhome1.jpeg" class="shop-card-img" alt="Workshop Kit" onerror="this.style.display='none'">
+            <!-- 2. Custom Trusses -->
+            <div class="shop-card reveal" style="--delay:0.1s">
+                <img src="images/custom-trusses.jpg" class="shop-card-img" alt="Custom Trusses" onerror="this.style.display='none'">
                 <div class="shop-card-header">
-                    <h3>Workshop Kit</h3>
-                    <div class="shop-price">$9,000</div>
-                    <div class="shop-price-note">20×24 footprint</div>
-                </div>
-                <ul class="shop-features">
-                    <li>Pre-cut, labeled steel frame</li>
-                    <li>Engineered for standard roofing & siding</li>
-                    <li>Assembly guide included</li>
-                    <li>Ideal for hobby barn or large workshop</li>
-                </ul>
-                <button class="stripe-btn featured-btn" onclick="handleStripeCheckout('workshop', 9000, 'Workshop Kit (20×24)')">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-                    Buy Now — $9,000
-                </button>
-                <p class="stripe-note">🔒 Secure checkout via Stripe</p>
-            </div>
-
-            <!-- Greenhouse / She Shed Combo -->
-            <div class="shop-card reveal" style="--delay:0.2s">
-                <img src="images/gemini.png" class="shop-card-img" alt="Greenhouse / She Shed Combo — Steel Trusses">
-                <div class="shop-card-header">
-                    <h3>Greenhouse / She Shed Combo</h3>
-                    <div class="shop-price">From $7,000</div>
-                    <div class="shop-price-note">Approx. 96 sq ft</div>
-                </div>
-                <ul class="shop-features">
-                    <li>Dual purpose combination shed unit</li>
-                    <li>Approx. 96 sq ft of floor space</li>
-                    <li>Ideal for gardening, studios, storage, or hobby rooms</li>
-                    <li>Custom truss options available</li>
-                </ul>
-                <button class="stripe-btn" onclick="handleStripeCheckout('greenhouse', 7000, 'Greenhouse / She Shed Combo')">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-                    Buy Now — $7,000
-                </button>
-                <p class="stripe-note">🔒 Secure checkout via Stripe</p>
-            </div>
-
-            <!-- Steel Trusses -->
-            <div class="shop-card reveal" style="--delay:0.3s">
-                <div class="shop-card-header">
-                    <h3>Steel Trusses</h3>
-                    <div class="shop-price" style="font-size:1.6rem;">Custom Quote</div>
+                    <h3>Custom Trusses</h3>
+                    <div class="shop-price" style="font-size:1.6rem;">Pricing Upon Request</div>
                     <div class="shop-price-note">Engineered to your spec</div>
                 </div>
                 <ul class="shop-features">
-                    <li>Custom and prefab precision light gauge steel truss options</li>
-                    <li>Fully engineered in ScotSteel Software</li>
-                    <li>Send us a design for your steel truss quote today</li>
-                    <li>Fast turnaround on engineered drawings</li>
+                    <li>Custom light-gauge steel trusses</li>
+                    <li>Residential, agricultural, commercial &amp; specialty applications</li>
+                    <li>Custom spans, roof pitches &amp; loading requirements</li>
+                    <li>Fully engineered solutions</li>
                 </ul>
-                <button class="stripe-btn custom-btn" onclick="handleStripeCheckout('trusses', 0, 'Steel Trusses — Custom Quote')">
-                    Request a Quote →
-                </button>
-                <p class="stripe-note">📧 We respond within 1 business day</p>
-            </div>
-
-            <!-- Custom Designs -->
-            <div class="shop-card reveal" style="--delay:0.4s">
-                <div class="shop-card-header">
-                    <h3>Custom Designs &amp; Mobile Roll Forming</h3>
-                    <div class="shop-price" style="font-size:1.3rem;">Pricing by Design</div>
-                    <div class="shop-price-note">Any size &amp; spec</div>
-                </div>
-                <ul class="shop-features">
-                    <li>Any footprint, height, or roof style</li>
-                    <li>Agricultural &amp; commercial specs</li>
-                    <li>On-site fabrication with mobile roll former</li>
-                    <li>Available across Arkansas &amp; surrounding states</li>
-                </ul>
-                <a href="mailto:cydneyskeens@gmail.com?subject=Custom Design&body=I'd like to discuss a custom steel frame design." class="stripe-btn custom-btn">
-                    Start a Custom Quote →
+                <a href="mailto:cydneyskeens@gmail.com?subject=Custom%20Truss%20Quote&body=I'd like to request a quote for custom steel trusses." class="stripe-btn custom-btn">
+                    Contact Us →
                 </a>
                 <p class="stripe-note">📧 We respond within 1 business day</p>
+                <p class="shop-shipping-note">Shipping and delivery are not included. Please contact us for a custom shipping quote or additional information before placing your order.</p>
+            </div>
+
+            <!-- 3. Portable Bathroom Pod -->
+            <div class="shop-card reveal" style="--delay:0.2s">
+                <img src="images/portable-bathroom-pod.jpg" class="shop-card-img" alt="Portable Bathroom Pod" onerror="this.style.display='none'">
+                <div class="shop-card-header">
+                    <h3>Portable Bathroom Pod</h3>
+                    <div class="shop-price" style="font-size:1.6rem;">$6,000 – $7,000</div>
+                    <div class="shop-price-note">5' × 5' Footprint</div>
+                </div>
+                <ul class="shop-features">
+                    <li>Steel-framed portable bathroom pod</li>
+                    <li>Incinerating toilet for remote or off-grid locations</li>
+                    <li>Electric Incinolet model — $6,000</li>
+                    <li>Propane TinyJohn model — $7,000</li>
+                </ul>
+                <div class="shop-variant-group">
+                    <button class="stripe-btn" onclick="handleStripeCheckout('bathroom-pod-electric', 6000, 'Portable Bathroom Pod — Electric Incinolet')">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                        Buy Now — Electric Incinolet $6,000
+                    </button>
+                    <button class="stripe-btn" onclick="handleStripeCheckout('bathroom-pod-propane', 7000, 'Portable Bathroom Pod — Propane TinyJohn')">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                        Buy Now — Propane TinyJohn $7,000
+                    </button>
+                </div>
+                <p class="stripe-note">🔒 Secure checkout via Stripe</p>
+                <div class="product-links">
+                    <a href="https://incinolet.com/product/model-tr/" target="_blank" rel="noopener">View Electric Incinolet specs →</a>
+                    <a href="https://shop.ecojohn.com/products/tinyjohn-waterless-incinerator-toilet" target="_blank" rel="noopener">View Propane TinyJohn specs →</a>
+                </div>
+                <p class="shop-shipping-note">Shipping and delivery are not included. Please contact us for a custom shipping quote or additional information before placing your order.</p>
+            </div>
+
+            <!-- 4. Greenhouse / She Shed Combo -->
+            <div class="shop-card featured reveal" style="--delay:0.3s">
+                <div class="featured-badge">Most Popular</div>
+                <img src="images/greenhouse-she-shed-combo.jpg" class="shop-card-img" alt="Greenhouse / She Shed Combo" onerror="this.style.display='none'">
+                <div class="shop-card-header">
+                    <h3>Greenhouse / She Shed Combo</h3>
+                    <div class="shop-price">$12,000</div>
+                    <div class="shop-price-note">Two-Room Kit</div>
+                </div>
+                <ul class="shop-features">
+                    <li>Complete light-gauge steel framing kit</li>
+                    <li>Two-room greenhouse &amp; multipurpose shed</li>
+                    <li>Ideal for gardening, studios, storage, or hobby rooms</li>
+                    <li>Custom truss options available</li>
+                </ul>
+                <button class="stripe-btn featured-btn" onclick="handleStripeCheckout('greenhouse-combo', 12000, 'Greenhouse / She Shed Combo')">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                    Buy Now — $12,000
+                </button>
+                <p class="stripe-note">🔒 Secure checkout via Stripe</p>
+                <p class="shop-shipping-note">Shipping and delivery are not included. Please contact us for a custom shipping quote or additional information before placing your order.</p>
+            </div>
+
+            <!-- 5. Steel Christmas Tree Kit -->
+            <div class="shop-card reveal" style="--delay:0.4s">
+                <img src="images/steel-christmas-tree-kit.jpg" class="shop-card-img" alt="Steel Christmas Tree Kit" onerror="this.style.display='none'">
+                <div class="shop-card-header">
+                    <h3>Steel Christmas Tree Kit</h3>
+                    <div class="shop-price">$850</div>
+                    <div class="shop-price-note">Life-Size · DIY</div>
+                </div>
+                <ul class="shop-features">
+                    <li>Life-size DIY light-gauge steel Christmas tree</li>
+                    <li>Includes all steel components &amp; rivets</li>
+                    <li>Step-by-step assembly instructions</li>
+                    <li>A festive, reusable steel-built centerpiece</li>
+                </ul>
+                <button class="stripe-btn" onclick="handleStripeCheckout('christmas-tree', 850, 'Steel Christmas Tree Kit')">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                    Buy Now — $850
+                </button>
+                <p class="stripe-note">🔒 Secure checkout via Stripe</p>
+                <p class="shop-shipping-note">Shipping and delivery are not included. Please contact us for a custom shipping quote or additional information before placing your order.</p>
+            </div>
+
+            <!-- 6. Custom Design Services -->
+            <div class="shop-card reveal" style="--delay:0.5s">
+                <img src="images/custom-design-services.jpg" class="shop-card-img" alt="Custom Design Services" onerror="this.style.display='none'">
+                <div class="shop-card-header">
+                    <h3>Custom Design Services</h3>
+                    <div class="shop-price" style="font-size:1.3rem;">Pricing by Scope</div>
+                    <div class="shop-price-note">Design &amp; Engineering</div>
+                </div>
+                <ul class="shop-features">
+                    <li>Custom steel framing design</li>
+                    <li>3D modeling &amp; engineered framing layouts</li>
+                    <li>Roll-form-ready production files</li>
+                    <li>Residential &amp; commercial projects</li>
+                </ul>
+                <a href="mailto:cydneyskeens@gmail.com?subject=Custom%20Design%20Services&body=I'd like to discuss a custom steel framing design project." class="stripe-btn custom-btn">
+                    Contact Us →
+                </a>
+                <p class="stripe-note">📧 We respond within 1 business day</p>
+                <p class="shop-shipping-note">Shipping and delivery are not included. Please contact us for a custom shipping quote or additional information before placing your order.</p>
             </div>
 
         </div>
