@@ -34,6 +34,16 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
+.nav-logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.nav-logo-link img {
+    display: block;
+}
+
 body {
     font-family: var(--font-body);
     background: var(--cream);
